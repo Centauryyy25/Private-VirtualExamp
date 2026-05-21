@@ -3,7 +3,7 @@ Exam management API endpoints.
 """
 from typing import Optional
 from uuid import UUID
-from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
@@ -123,6 +123,15 @@ async def list_exams(
     return result.scalars().all()
 
 
+@router.get("/formats")
+async def list_formats():
+    """List available parsing formats."""
+    return {
+        "file_formats": ["oef", "json", "pdf"],
+        "pdf_formats": get_available_pdf_formats(),
+    }
+
+
 @router.get("/{exam_id}", response_model=ExamDetailResponse)
 async def get_exam(
     exam_id: UUID,
@@ -163,20 +172,11 @@ async def delete_exam(
     await db.commit()
 
 
-@router.get("/formats")
-async def list_formats():
-    """List available parsing formats."""
-    return {
-        "file_formats": ["oef", "json", "pdf"],
-        "pdf_formats": get_available_pdf_formats(),
-    }
-
-
 @router.post("/upload-pdf", response_model=ExamDetailResponse, status_code=status.HTTP_201_CREATED)
 async def upload_exam_pdf(
     file: UploadFile = File(...),
-    is_public: bool = False,
-    pdf_format: str = "ccna",
+    is_public: bool = Form(False),
+    pdf_format: str = Form("ccna"),
     user_id: str = Depends(get_current_user_id),
     db: AsyncSession = Depends(get_db)
 ):
