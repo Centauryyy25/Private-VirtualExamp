@@ -198,6 +198,7 @@ export default function DemoPage() {
             mode,
             mode === 'timed' ? 30 : undefined
         );
+        sessionStorage.removeItem('resultsSaved');
         router.push('/exam');
     };
 

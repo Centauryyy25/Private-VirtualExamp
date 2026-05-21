@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useExamStore } from '@/lib/store/examStore';
@@ -30,7 +30,7 @@ export default function ResultsPage() {
     const { addEntry } = useHistoryStore();
     const { isAuthenticated } = useAuth();
     const [examInfo, setExamInfo] = useState<ExamInfo | null>(null);
-    const savedRef = useRef(false);
+    const [saved, setSaved] = useState(() => sessionStorage.getItem('resultsSaved') === 'true');
     const [results, setResults] = useState<{
         score: number;
         passed: boolean;
@@ -114,8 +114,9 @@ export default function ResultsPage() {
 
         setResults(calculatedResults);
 
-        if (!savedRef.current) {
-            savedRef.current = true;
+        if (!saved) {
+            sessionStorage.setItem('resultsSaved', 'true');
+            setSaved(true);
             const modeStr = sessionStorage.getItem('examMode') || 'training';
             addEntry({
                 examTitle: info.title,
@@ -126,7 +127,7 @@ export default function ResultsPage() {
                 correctAnswers: calculatedResults.correct,
             });
         }
-    }, [router, addEntry]);
+    }, [router, saved, addEntry]);
 
     const handleDashboard = () => {
         clearSession();

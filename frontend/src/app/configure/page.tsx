@@ -61,6 +61,7 @@ export default function ConfigureExamPage() {
         );
 
         sessionStorage.setItem('examMode', mode === 'exam' ? 'timed' : 'training');
+        sessionStorage.removeItem('resultsSaved');
         router.push('/exam');
     };
 
