@@ -264,7 +264,10 @@ class CCPDFExamParser:
                         current_question_text = q_text_lines
                         in_explanation = False
 
-                current_options.append({"id": opt_id, "text": opt_text})
+                # Skip duplicate option IDs (explanation text sometimes starts with "B." etc.)
+                existing_ids = {o["id"] for o in current_options}
+                if opt_id not in existing_ids:
+                    current_options.append({"id": opt_id, "text": opt_text})
                 in_explanation = False
                 continue
 

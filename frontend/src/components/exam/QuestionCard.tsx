@@ -152,7 +152,7 @@ export default function QuestionCard({ question, showAnswer = false }: QuestionC
 
                     return (
                         <div
-                            key={option.id}
+                            key={`${option.id}-${index}`}
                             onClick={() => handleOptionClick(option.id)}
                             className={`relative group cursor-pointer p-5 rounded-2xl border-2 transition-all duration-200 hover:shadow-md active:scale-[0.99] flex items-start gap-4 ${cardStyles}`}
                         >
