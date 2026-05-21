@@ -1,0 +1,4736 @@
+Cisco Certified Network Associate ( CCNA )
+Number: 200-301
+Passing Score: 800
+Time Limit: 120 min
+File Version: 7.6
+Cisco Certified Network Associate ( CCNA 200-301 )
+
+Exam A
+QUESTION 1
+What are two recommendations for protecting network ports from being exploited when located in an office space outside of an IT closet? (Choose two.)
+A. configure ports to a fixed speed
+B. configure static ARP entries
+C. shut down unused ports
+D. implement port-based authentication
+E. enable the PortFast feature on ports
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 2
+An engineer just installed network 10.120.10.0/24. Which configuration must be applied to the R14 router to add the new network to its OSPF routing table?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 3
+Refer to the exhibit. An engineer is checking the routing table in the main router to identify the path to a server on the network. Which route
+does the router use to reach the server at 192.168.2.2?
+A. S 192.168.1.0/30 [1/0] via 10.1.1.1
+B. S 192.168.2.0/28 [1/0] via 10.1.1.1
+C. S 192.168.0.0/20 [1/0] via 10.1.1.1
+D. S 192.168.2.0/29 [1/0] via 10.1.1.1
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 4
+What is the role of the root port in a switched network?
+
+A. It replaces the designated port when the root port fails.
+B. It is the best path to the root from a nonroot switch.
+C. It is administratively disabled until a failover occurs.
+D. It replaces the designated port when the designated port fails.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 5
+When the active router in an HSRP group fails, what router assumes the role and forwards packets?
+A. Forwarding
+B. Backup
+C. Listening
+D. Standby
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 6
+OSPF must be configured between routers R1 and R2. Which OSPF configuration must be applied to router R1 to avoid a DR/BDR election?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 7
+Refer to the exhibit. Packets are flowing from 192.168.10.1 to the destination at IP address 192.168.20.75. Which next hop will the router select for the packet?
+A. 10.10.10.1
+B. 10.10.10.14
+C. 10.10.10.12
+D. 10.10.10.11
+Correct Answer: D
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 8
+Refer to the exhibit. An access-list is required to permit traffic from any host on interface Gi0/0 and deny traffic from interface Gi0/1 .Which
+access list must be applied?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 9
+What are two advantages of implementing a controller-based architecture instead of a traditional network architecture? (Choose two.)
+A. It allows for seamless connectivity to virtual machines.
+B. It supports complex and high-scale IP addressing schemes.
+C. It increases security against_denial-of-service attacks
+D. It provides increased scalability and management options.
+E. It enables configuration task automation.
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 10
+Which CRUD operation corresponds to the HTTP GET method?
+A. Delete
+B. Create
+C. Read
+D. Update
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 11
+When deploying syslog, which severity level logs informational messages?
+A. 2
+B. 0
+C. 4
+D. 6
+Correct Answer: D
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 12
+Refer to the exhibit. How must OSPF be configured on the GigabitEthernet0/0 interface of the neighbor device to achieve the desired neighbor
+relationship?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 13
+Refer to the exhibit .What does route 10.0.1.3/32 represent in the routing table?
+A. all hosts in the 10.0.1.0 subnet
+B. the 10.0.0.0 network
+C. the source 10.0.1.100
+D. a single destination address
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 14
+When configuring a WLAN with WPA2 PSK in the Cisco Wireless LAN Controller GUI, which two formats are available to select? (Choose two.)
+A. hexadecimal
+B. base64
+C. ASCII
+D. binary
+E. decimal
+Correct Answer: AC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 15
+What is the effect when loopback interfaces and the configured router ID are absent during the OSPF Process configuration?
+
+A. The router ID 0.0.0.0 is selected and placed in the OSPF process.
+B. No router ID is set, and the OSPE protocol does not run.
+C. The highest up/up physical interface IP address is selected as the router lD.
+D. The lowest IP address is incremented by 1 and selected as the router ID.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 16
+When a WPA2-PSK WLAN is configured in the Wireless LAN Controller, what is the minimum number of characters that is required in ASCII format?
+A. 8
+B. 18
+C. 6
+D. 12
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 17
+Refer to the exhibit. The network engineer is configuring router R2 as a replacement router on the network. After the initial configuration is applied, it is
+determined that R2 failed to show R1 as a neighbor. Which configuration must be applied to R2 to complete the OSPF configuration and enable it to
+establish the neighbor relationship with R1?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 18
+What is a difference between RADIUS and TACACS+?
+A. RADIUS logs all commands that are entered by the administrator, but TACACS+ logs only start, stop, and interim commands.
+B. TACACS+ encrypts only password information, and RADIUS encrypts the entire payload.
+C. RADIUS is most appropriate for dial authentication, but TACACS+ can be used for multiple types of authentication.
+
+D. TACACS+ separates authentication and authorization, and RADIUS merges them.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 19
+Refer to the exhibit. The link between PC1 and the switch is up, but it is performing poorly. Which interface condition is causing the performance problem?
+A. There is an interface type mismatch.
+B. There is a duplex mismatch on the interface.
+C. There is a speed mismatch on the interface.
+D. There is an issue with the fiber on the switch interface.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 20
+Refer to the exhibit. Users at a branch office are experiencing application performance issues, poor VoIP audio quality, and slow downloads. What is
+the cause of the issues?
+A. overutilization
+B. broadcast storm
+C. interface configuration
+D. QoS queuing
+
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 21
+After installing a new Cisco ISE server, which task must the engineer perform on the Cisco WLC to connect wireless clients on a specific VLAN based
+on their credentials?
+A. Disable the LAG Mode on Next Reboot
+B. Enable the Allow AAA Override.
+C. Enable the Event Driven RRM
+D. Enable the Authorize MIC APs against auth-list or AAA.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 22
+Refer to the exhibit. Which path is used by the router for internet traffic?
+A. 209.165.200.0/27
+B. 0.0.0.0/0
+C. 10.10.10.0/28
+D. 10.10.13.0/24
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 23
+A user configured OSPF and advertised the Gigabit Ethernet interface in OSPF. By default, which type of OSPF network does this interface belong to?
+A. point-to multipoint
+B. broadcast
+C. point-to-point
+D. nonbroadcast
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 24
+Which type of port is used to connect to the wired network when an autonomous AP maps two VLANs to its WLANs?
+
+A. EtherChannel
+B. Trunk
+C. Access
+D. LAG
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 25
+How do TCP and UDP fit into a query-response model?
+A. TCP encourages out-of-order packet delivery, and UDP prevents re-ordering
+B. TCP establishes a connection prior to sending data,and UDP sends immediately.
+C. TCP uses error detection for packets, and UDP uses error recovery.
+D. TCP avoids using sequencing, and UDP avoids using acknowledgments.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 26
+Refer to the exhibit. An architect is managing a wireless network with APs from several branch offices connecting to the WLC in the data center. There is a new
+requirement for a single WLAN to process the client data traffic without sending it to the WLC. Which action must be taken to complete the request?
+A. Enable local HTTP profiling.
+B. Enable FlexConnect Local Switching.
+C. Enable local DHCP Profiling.
+D. Enable Disassociation Imminent.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 27
+What is the difference between IPv6 unicast and anycast addressing?
+A. Unlike an IPv6 anycast address, an IPv6 unicast address is assigned to a group of interfaces on multiple nodes.
+B. An individual IPv6 unicast address is supported on a single interface on one node, but an IPv6 anycast address is assigned to a group of
+interfaces on multiple nodes.
+C. IPv6 unicast nodes must be explicitly configured to recognize the unicast address, but IPv6 anycast nodes require no special configuration.
+D. IPv6 anycast nodes must be explicitly configured to recognize the anycast address, but IPv6 unicast nodes require no special configuration.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 28
+What is the primary difference between AAA authentication and authorization?
+A.
+
+B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 29
+What is a difference between local AP mode and FlexConnect AP mode?
+A. Local AP mode creates two CAPWAP tunnels per AP to the WLC.
+B. FlexConnect AP mode fails to function if the AP loses connectivity with the WLC.
+C. FlexConnect AP mode bridges the traffic from the AP to the WLC when local switching is configured.
+D. Local AP mode causes the AP to behave as if it were an autonomous AP.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 30
+An engineer is configuring remote access to a router from IP subnet 10.139.58.0/28. The domain name, crypto keys, and SSH have been configured.
+Which configuration enables the traffic on the destination router?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 31
+Refer to the exhibit. A packet sourced from 10.10.10.32 is destined for the Internet. What is the administrative distance for the destination route?
+A. 0
+B. 32
+C. 2
+D. 1
+
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 32
+What differentiates device management enabled by Cisco DNA Center from traditional campus device management?
+A. centralized
+B. device-by-device hands-on
+C. per-device
+D. CLl-oriented device
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 33
+Which benefit does Cisco DNA Center provide over traditional campus management?
+A. Cisco DNA Center leverages APIs, and traditional campus management requires manual data gathering.
+B. Cisco DNA Center leverages SNMPv3 for encrypted management, and traditional campus management uses SNMPv2.
+C. Cisco DNA Center automates SSH access for encrypted entry, and SSH is absent from traditional campus management.
+D. Cisco DNA Center automates HTTPS for secure web access, and traditional campus management uses HTTP.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 34
+Which protocol requires authentication to transfer a backup configuration file from a router to a remote server?
+A. FTP
+B. DTP
+C. SMTP
+D. TFTP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 35
+Refer to the exhibit. The ntp server 192.163.0.3 command has been configured on router 1 to make it an NTP client of router 2. Which command
+must be configured on router 2 so that it operates in server-only mode and relies only on its internal clock?
+A. Router2(config)#ntp passive
+B. Router2(config)#ntp server 192.168.0.2
+C. Router2(config)#ntp server 172.17.0.1
+D. Router2(config)#ntp master 4
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 36
+
+Refer to the exhibit. Traffic from R1 to the 10.10.20/24 subnet uses 192.168.1.2 as its next hop. A network engineer wants to update the R1
+configuration so that traffic with destination 10.10.2.1 passes through router R3, and all other traffic to the 10.10.2.0/24 subnet passes through R2.
+Which command must be used?
+A. ip route 10.10.2.1 255.255.255.255 192.168.1.4 100
+B. ip route 10.10.2.0 255.255.255.0 192.168.1.4 115
+C. ip route 10.10.2.0 255.255.255.0 192.168.1.4 100
+D. ip route 10.10.2.1 255.255.255.255 192.168.1.4 115
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 37
+What are two benefits of controller-based networking compared to traditional networking? (Choose two.)
+A. controller-based inflates software costs, while traditional decreases individual licensing costs
+B. controller-based reduces network configuration complexity, while traditional increases the potential for errors
+C. controller-based increases network bandwidth usage, while traditional lightens the load on the network
+D. controller-based allows for fewer network failures, while traditional increases failure rates
+E. controller-based provides centralization of key IT functions, while traditional requires distributed management functions
+Correct Answer: BE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 38
+
+Refer to the exhibit. Router OldR is replacing another router on the network with the intention of having OldR and R2 exchange routes. After the engineer applied
+the initial OSPF
+configuration, the routes were still missing on both devices. Which command sequence must be issued before the clear IP ospf process command is entered to
+enable the neighbor
+relationship?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 39
+Refer to the exhibit. What does router R1 use as its OSPF router-ID?
+A. 10.10.10.20
+B. 10.10.1.10
+C. 192.168.0.1
+D. 172.16.15.10
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 40
+A port security violation has occurred on a switch port due to the maximum MAC address count being exceeded. Which command must be configured
+to increment the security-violation count and forward an SNMP trap?
+A. switchport port-security violation shutdown
+B. switchport port-security violation protect
+C. switchport port-security violation restrict
+D. switchport port-security violation access
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 41
+A device detects two stations transmitting frames at the same time. This condition occurs after the first 64 bytes of the frame is received. Which
+interface counter increments?
+A. Collision
+B. CRC
+C. Runt
+D. late collision
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 42
+R1 has learned route 10.10.10.0/24 via numerous routing protocols. Which route is installed?
+A. route with the lowest administrative distance
+B. route with the next hop that has the highest IP
+C. route with the shortest prefix length
+D. route with the lowest cost
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 43
+Refer to the exhibit. Which minimum configuration items are needed to enable Secure Shell version 2 access to R15?
+A. B.
+C.
+
+D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 44
+Which two QoS tools provide congestion management?
+A. PQ
+B. CAR
+C. FRTS
+D. CBWFQ
+E. PB
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 45
+What are two characteristics of a controller-based network? (Choose two.)
+A. It moves the control plane to a central point.
+B. The administrator can make configuration updates from the CLI
+C. It uses northbound and southbound APIs to communicate between architectural layers.
+D. It decentralizes the control plane, which allows each device to make its own forwarding decisions
+E. It uses Telnet to report system issues.
+Correct Answer: AC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 46
+Refer to the exhibit. What is the effect of this configuration?
+A. All ingress and egress traffic is dropped because the interface is untrusted.
+B. The switch discards all ingress ARP traffic with invalid MAC-to-lP address bindings
+C. Egress traffic is passed only if the destination is a DHCP server.
+D. All ARP packets are dropped by the switch.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 47
+Refer to the exhibit. A packet is being sent across router R1 to host 172.16.3.14. To which destination does the router send the packet?
+A. 207.165.200.254 via Serial0/0/1
+B. 207.165.200.250 via SeriaI0/0/0
+C. 207.165 200.254 via Serial0/0/0
+D. 207.165.200.246 via Serial0/1/0
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 48
+Refer to the exhibit. Router R1 is running three different routing protocols. Which route characteristic is used by the router to forward the packet
+that destination IP 172.16.32.1?
+A. longest prefix
+B. administrative distance
+C. cost
+D. metric
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 49
+Which function does an SNMP agent perform?
+A. It coordinates user authentication between a network device and a TACACS+ or RADIUS server.
+B. It requests information from remote network nodes about catastrophic system events.
+C. It manages routing between Layer 3 devices in a network.
+D. It sends information about MIB variables in response to requests from the NMS.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 50
+Refer to the exhibit. Which configuration must be applied to the router that configures PAT to translate all addresses in VLAN 200 while
+allowing devices on VLAN 100 to use their own IP addresses?
+A.
+
+B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 51
+Which type of IPv6 address is publicly routable in the same way as IPv4 public addresses?
+A. multicast
+B. unique local
+C. global unicast
+D. link-local
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 52
+Which two components are needed to create an Ansible script that configures a VLAN on a switch? (Choose two.)
+A. Cookbook
+B. Model
+C. Playbook
+D. Recipe
+E. Task
+Correct Answer: CE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 53
+Refer to the exhibit. What is the next-hop IP address for R2 so that PC2 reaches the application server via EIGRP?
+A. 192.168.30.1
+B. 10.10.10.6
+C. 192.168.20.1
+D. 10.10.10.5
+
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 54
+What is a function of TFTP in network operations?
+A. transfers files between file systems on a router
+B. transfers a backup configuration file from a server to a switch using a username and password
+C. transfers IOS images from a server to a roUter for firmware upgrades
+D. transfers a configuration files from a server to a router on a congested link
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 55
+Which characteristic differentiates the concept of authentication from authorization and accounting?
+A. service limitations
+B. identity verification
+C. consumption-based billing
+D. user-activity logging
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 56
+A wireless administrator has configured a WLAN, however, the clients need access to a less congested 5-GHz network for their voice
+quality. What action must be taken to meet the requirement?
+A. enable DTIM
+B. enable AAA override
+C. enable Band Select
+D. enable RX-SOP
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 57
+
+Refer to the exhibit. Which prefix does Router1 use for traffic to Host A?
+A. 10.10.13.208/29
+B. 10.10.30.0/25
+C. 10.10.10.0/28
+D. 10.10.13.144/28
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 58
+Refer to the exhibit. If R1 receives a packet destined to 172.16.1.1, to which IP address does it send the packet?
+A. 192.168.14.4
+B. 192.168.15.5
+C. 192.168.13.3
+D. 192.168.12.2
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 59
+Which 802.11 frame type is Association Response?
+A. action
+B. control
+C. protected frame
+D. management
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 60
+R1 has learned route 192.168.12.0/24 via lS-IS, OSPF, RlP, and lntemal EIGRP. Under normal operating conditions, which routing
+
+protocol is installed in the routing table?
+A. RIP
+B. OSPF
+C. lS-IS
+D. Internal EIGRP
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 61
+Refer to the exhibit. Web traffic is coming in from the WAN interface. Which route takes precedence when the router is processing traffic destined for
+the LAN network at 10.0.10.0/24?
+A. via next-hop 10.0.1.4
+B. via next-hop 10.0.1.5
+C. via next-hop 10.0.1.50
+D. via next-hop 10.0.1.100
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 62
+What are two reasons that cause late collisions to increment on an Ethernet interface? (Choose two.)
+A. when one side of the connection is configured for half-duplex
+B. when the sending-device waits 15 seconds before sending the frame again
+C. when a collision occurs after the 32nd byte of a frame has been transmitted
+D. when the cable length limits are exceeded
+E. when Carrier Sense Multiple Access/Collision Detection is used
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 63
+When a site-to-site VPN is configured, which lPsec mode provides encapsulation and encryption of the entire original lP packet?
+A. lPsec tunnel mode with ESP
+B. lPsec transport mode with AH
+C. lPsec transport mode with ESP
+D. lPsec tunnel mode with AH
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 64
+A network analyst is tasked with configuring the date and time on a router using EXEC mode. The date must be set to January 1,2020 and the time must be set to
+12:00 am. What command should be used?
+A. clock summer-time date
+B. clock timezone
+C. clock summer-time recurring
+D. clock set
+
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 65
+Refer to the exhibit. What is the metric of the route to the 192.168.10.33 host?
+A. 193
+B. 84
+C. 192
+D. 110
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 66
+Refer to the exhibit. R1 has taken the DROTHER role in the OSPF DR/BDR election process. Which configuration must an engineer implement so
+that R1 is elected as the DR?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 67
+Which two outcomes are predictable behaviors for HSRP? (Choose two.)
+A. The two routers negotiate one router as the active router and the other as the standby router.
+B. Each router has a different IP address, both routers act as the default gateway on the LAN, and traffic is toad-balanced between them.
+C. The two routers share the same interface IP address, and default gateway traffic is load-balanced between them.
+D. The two routers share a virtual IP address that is used as the default gateway for devices on the LAN.
+E. The two routers synchronize configurations to provide consistent packet forwarding.
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 68
+Refer to the exhibit All trafiic enters the CPE router from interface Serial0/3 with an IP address of 192.168.50.1. Web traffic from the WAN is
+destined for a LAN network where servers are load-balanced. An IP packet with a destination address of the HTTP virtual IP of 192.168.1.250
+must be forwarded. Which routing table entry does the router use?
+A. 192.168.1.0/24 via 192.168.12.2
+B. 192.168.1.128/25 via 192.168.13.3
+C. 192.168.1.192/26 via 192.168.14.4
+D. 192.168.1.224/27 via 192.168.15.5
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 69
+A network administrator is setting up a new IPv6 network using the 64-bit address 2001:0E88:00C1:2200:0001:0000:0000:0331/64. To simplify the
+configuration, the administrator has decided to compress the address. Which IP address must the administrator configure?
+A. ipv6 address 2001:EB8:C1:2200:1::331/64
+B. ipv6 address 2001:EB8:C1:2200:1:0000:331/64
+C. ipv6 address 21:EB8:C1 :2200:1::331/64
+D. ipv6 address 2001:EB8:C1:22:1::331/64
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 70
+Refer to the exhibit. R5 is the current DR on the network, and R4 is the BDR. Their interfaces are flapping, so a network engineer wants the OSPF network to
+elect a different DR and BDR. Which set of configurations must the engineer implement?
+
+A.
+B. C.
+D. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 71
+Refer to the exhibit. Packets received by the router from BGP enter via a serial interface at 209.165.201.1. Each route is present
+within the routing table. Which interface is used to forward traffic with a destination IP of 10.1.1.19?
+A. F0/3
+B. F0/0
+C. F0/4
+D. F0/1
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 72
+A network engineer is configuring a switch so that it is remotely reachable via SSH. The engineer has already configured the host
+name on the router. Which additional command must the engineer configure before entering the command to generate the RSA key?
+A. password password
+B. crypto key generate rsa modulus 1024
+C. ip ssh authentication-rabies 2
+D. ip domain-name domain
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 73
+What is the role of SNMP in the network?
+A. to collect telemetry and critical information from network devices using an SSH underlay that operates on the network layer
+B. to monitor network devices and functions using a TCP underlay that operates on the presentation layer
+C. to collect data directly from network devices using an SSL underlay that operates on the transport layer
+D. to monitor and manage network devices using a UDP underlay that operates on the application layer
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 74
+Which two values or settings must be entered when configuring a new WLAN in the Cisco Wireless LAN Controller GUI? (Choose two.)
+A. management interface settings
+B. QoS settings
+C. SSlD
+D. profile name
+E. IP address of one or more access points
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 75
+Refer to the exhibit. Router R1 is added to the network and configured with the 10.0.0.64/26 and 10.0.20.0/24 subnets. However, traffic destined for the
+LAN on R3 is not accessible. Which command when executed on R1 defines a static route to reach the R3 LAN?
+A. ip route 10.0.15.0 255.255.255.192 10.0.20.1
+B. ip route 10.0.15.0 255.255.255.0 10.0.20.3
+C. ip route 10.0.15.0 255.255.255.0 10.0.20.1
+D. ip route 10.0.0.64 255.255.255.192 10.0.20.3
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 76
+Which lPsec transport mode encrypts the IP header and the payload?
+A. pipe
+B. transport
+C. tunnel
+D. control
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 77
+What does a switch use to build its MAC address table?
+A. VTP
+B. ingress traffic
+C. egress traffic
+D. DTP
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 78
+
+Refer to the exhibit. Which action must be taken to ensure that router A is elected as the DR for OSPF area 0?
+A. Configure router B and router C as OSPF neighbors of router A
+B. Configure the router A interfaces with the highest OSPF priority value within the area.
+C. Configure the OSPF priority on router A with the lowest value between the three routers.
+D. Configure router A with a fixed OSPF router ID.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 79
+Refer to the exhibit. An engineer must configure router R2 so it is elected as the DR on the WAN subnet. Which command sequence must be
+configured?
+A. B.
+
+C.
+D. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 80
+To improve corporate security, an organization is planning to implement badge authentication to limit access to the data center. Which element of a
+security program is being deployed?
+A. user awareness
+B. vulnerability verification
+C. user training
+D. physical access control
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 81
+What must be considered before deploying virtual machines?
+A. whether to leverage VSM to map multiple virtual processors to two or more virtual machines
+B. resource limitations, such as the number of CPU cores and the amount of memory
+C. support for physical peripherals, such as monitors, keyboards, and mice
+D. location of the virtual machines within the data center environment
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 82
+A network engineer must configure the router R1 GigabitEthernet1/1 interface to connect to the router R2 GigabitEthernet1/1 interface. For the
+configuration to be applied, the engineer must compress the address 2001:0db8:0000:0000:0500:000a:400F:583B. Which command must be issued
+on the interface?
+A. ipv6 address 2001:db8:0::500:a:4F:583B
+B. ipv6 address 2001:0db8::5:a:4F:583B
+C. ipv6 address 2001::db8:0000::500:a:400F:583B
+D. ipv6 address 2001:db8::500:a:400F:583B
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 83
+Refer to the exhibit. What is the subnet mask for route 172.16.4.0?
+A. 255.255.248.0
+B. 255.255.255.192
+C. 255.255.254.0
+D. 255.255.240.0
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 84
+What is a reason why an administrator would choose to implement an automated network management approach?
+A. limit recurrent management costs
+B. enable "box by box" configuration and deployment
+C. reduce inconsistencies in the network configuration.
+D. decipher simple password policies.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 85
+Refer to the exhibit. Which route does R1 select for traffic that is destined to 192.168.16.2?
+A. 192.168.16.0/27
+B. 192.168.16.0/24
+C. 192.168.16.0/21
+D. 192.168.26.0/26
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 86
+What is a requirement for nonoverlapping Wi-Fi channels?
+A. discontinuous frequency ranges
+B. unique SSIDs
+C. different transmission speeds
+D. different security settings
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 87
+Refer to the exhibit. Which network prefix was learned via EIGRP?
+A. 207.165.200.0/24
+B. 192.168.1.0/24
+C. 192.168.2.0/24
+D. 172.160.0/16
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 88
+Which protocol uses the SSL?
+A. HTTPS
+B. Telnet
+
+C. SSH
+D. HTTP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 89
+Refer to the exhibit. The New York router must be configured so that traffic to 2000::1 is sent primarily via the Atlanta site, with a secondary path via
+Washington that has an administrative distance of 2. Which two commands must be configured on the New York router? (Choose two.)
+A. ipv6 route 2000::1/128 2012::1
+B. ipv6 route 2000::1/128 2023::3 2
+C. ipv6 route 2000::1/128 2023::2 5
+D. ipv6 route 2000::1/128 2012:1 5
+E. ipv6 route 2000::1/128 2012::2
+Correct Answer: AB
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 90
+Refer to the exhibit. Router R1 currently is configured to use R3 as the primary route to the Internet, and the route uses the default administrative
+distance settings. A network engineer must configure R1 so that it uses R2 as a backup, but only if R3 goes down. Which command must the engineer
+configure on R1 so that it correctly uses R2 as a backup route, without changing the administrative distance configuration on the link to R3?
+A. ip route 0.0.0.0 0.0.0.0 g0/1 6
+B. ip route 0.0.0.0 0.0.0.0 209.165.201.5 10
+C. ip route 0.0.0.0.0.0.0.0 209.165.200.226 1
+D. ip route 0.0.0.0 0.0.0.0 g0/1 1
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 91
+
+Refer to the exhibit. A packet sourced from 10.10.10.1 is destined for 10.10.8.14. What is the subnet mask of the destination route?
+A. 255.255.255.240
+B. 255.255.254.0
+C. 255.255.255.248
+D. 255.255.255.252
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 92
+In QoS, which prioritization method is appropriate for interactive voice and video?
+A. traffic policing
+B. round-robin scheduling
+C. low-latency queuing
+D. expedited forwarding
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 93
+Refer to the exhibit. Which IP route command created the best path for a packet destined for 10.10.10.3?
+A. ip route 10.0.0.0 255.0.0.0 g0/0
+B. ip route 10.10.0.0 255.255.252.0 g0/0
+C. ip roure 10.10.10.0 255.255.255.240 g0/0
+D. ip route 10.10.10.1 255.255.255.255 g0/0
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 94
+Refer to the exhibit. How does router R1 handle traffic to 192.168.10.16?
+A. lt selects the RIP route because it has the longest prefix inclusive of the destination address.
+B. It selects the IS-IS route because it has the shortest prefix inclusive of the destination address.
+C. It selects the OSPF route because it has the lowest cost.
+D. It selects the EIGRP route because it has the lowest administrative distance.
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 95
+Which two conditions must be met before SSH operates normally on a Cisco IOS switch? (Choose two.)
+A. The switch must be running a k9 (crypto) IOS image.
+B. IP routing must be enabled on the switch.
+C. A console password must be configured on the switch.
+D. The ip domain-name command must be configured on the switch.
+E. Telnet must be disabled on the switch.
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 96
+A network engineer is replacing the switches that belong to a managed-services client with new Cisco Catalyst switches. The new
+switches will be configured for updated security standards, including replacing Telnet services with encrypted connections and
+doubling the modulus size from 1024. Which two commands must the engineer configure on the new switches? (Choose two.)
+A. transport input ssh
+B. crypto key generate rsa general-keys modulus 1024
+C. crypto key generate rsa usage-keys
+D. crypto key generate rsa modulus 2048
+E. transport input all
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 97
+An engineer is configuring switch SW1 to act as an NTP server when all upstream NTP server connectivity fails. Which configuration must be used?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 98
+How does HSRP provide first hop redundancy?
+A. It uses a shared virtual MAC and a virtual IP address to a group of routers that serve as the default gateway for hosts on a LAN
+B. It load-balances Layer 2 traffic along the path by flooding traffic out all interfaces configured with the same VLAN.
+C. It load-balances traffic by assigning the same metric value to more than one route to the same destination in the IP routing table.
+D. It forwards multiple packets to the same destination over different routed links in the data path.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 99
+What is a benefit for external users who consume public cloud resources?
+A. all hosted on physical servers
+B. accessed over the Internet
+C. located in the same data center as the users
+
+D. implemented over a dedicated WAN
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 100
+Which unified access point mode continues to serve wireless clients after losing connectivity to the Cisco Wireless LAN Controller?
+A. flexconnect
+B. sniffer
+C. local
+D. mesh
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 101
+Refer to the exhibit. An administrator must configure interfaces Gi1/1 and Gi1/3 on switch SW11. PC-1 and PC-2 must be placed in the Data
+VLAN, and Phone-1 must be placed in the Voice VLAN. Which configuration meets these requirements?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 102
+What is the maximum bandwidth of a T1 point-to-point connection?
+A. 43.7 Mbps
+B. 1.544 Mbps
+C. 2.048 Mbps
+D. 34.368 Mbps
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 103
+Refer to the exhibit. When router R1 receives a packet with destination IP address 10.56.0.62, through which interface does it route the packet?
+A. Vlan60
+B. NulI0
+C. Vlan58
+D. Vlan59
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 104
+A network engineer must migrate a router loopback interface to the IPv6 address space. If the current IPv4 address of the interface is 10.54.73.1/32,
+and the engineer configures IPv6 address 0:0:0:0:0.ffff:a00:0000, which prefix length must be used?
+A. /128
+B. /64
+C. /96
+D. /124
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 105
+Which value is the unique identifier that an access point used to establish and maintain wireless connectivity to wireless network devices?
+A. RFID
+B. SSID
+C. VLAN ID
+D. WLAN ID
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 106
+
+Refer to the exhibit. How does router R1 handle traffic to the 172.16.1.4/30 subnet?
+A. It sends all traffic over the path via 10.0.1.100.
+B. It load-balances traffic over 172.16.9.5 and 172.16.4.4.
+C. It sends all traffic over the path via 172.16.4.4.
+D. It sends all traffic over the path via 172.16.9.5 using 172.16.4.4 as a backup.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 107
+An engineer configured an OSPF neighbor as a designated router. Which state verifies the designated router is in the proper mode?
+A. 2-way
+B. lnit
+C. Full
+D. Exchange
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 108
+An organization secures its network with multi-factor authentication using an authenticator app on employee smartphones. How is the application
+secured in the case of a user's smartphone being lost or stolen?
+A. The application verifies that the user is in a specific location before it provides the second factor.
+B. The application requires the user to enter a PlN before it provides the second factor.
+C. The application requires an administrator password to reactivate after a configured interval.
+D. The application challenges a user by requiring an administrator password to reactivate when the smartphone is rebooted.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 109
+A packet from a company's branch office is destined to host 172.31.0.1 at headquarters. The sending router has three possible matches in its routing
+table for the packet prefixes 172.31.0.0/16,172.31.0.0/24, and 172.31.0.0/25. How does the router handle the packet?
+A. It sends the traffic via prefix 172.31.0.0/25.
+B. It sends the traffic via the default gateway 0.0.0.0/0.
+C. It sends the traffic via prefix 172.31.0.0/24.
+D. It sends the traffic via prefix 172.31.0.0/16.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 110
+What configuration management mechanism uses TCP port 22 by default when communicating with managed nodes?
+A. Python
+B. Ansible
+C. Chef
+D. Puppet
+Correct Answer: B
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 111
+How do servers connect to the network in a virtual environment?
+A. a cable connected to a physical switch onthe network
+B. a virtual switch that links to an access point that is physically connected to the network
+C. wireless to an access point that is physically connected to the network
+D. a software switch on a hypervisor that is physically connected to the network
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 112
+Refer to the exhibit. What is a reason for poor performance on the network interface?
+A. The bandwidth setting of the interface is misconfigured.
+B. The interface is receiving excessive broadcast traffic.
+C. The cable connection between the two devices is faulty.
+D. The interface is operating at a different speed than the connected device.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 113
+A Cisco engineer notices that two OSPF neighbors are connected using a crossover Ethernet cable. The neighbors are taking too long to become fully
+adjacent. Which command must be issued under the interface configuration on each router to reduce the time required for the adjacency to reach the
+FULL state?
+A. ip ospf dead-interval 40
+B. ip ospf priority 0
+C. ip ospf network broadcast
+D. ip ospf network point-to-point
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 114
+Which API is used in controller-based architectures to interact with edge devices?
+A. underlay
+B. southbound
+C. nonhbound
+D. overlay
+Correct Answer: B
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 115
+Refer to the exhibit. Which type of JSON data is shown?
+A. array
+B. Object
+C. Boolean
+D. Key
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 116
+Refer to the exhibit. A packet sourced from 172.18.33.2 is destined for 172.18.32.38. Where does the router forward the packet?
+A. GigabitEthernet0/0
+B. 10.1.1.3
+C. 10.1.1.1
+D. Loopback0
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 117
+A DHCP pool has been created with the name CONTROL. The pool uses the next to last usable IP address as the default gateway for the DHCP
+clients. The server is located at 172.16.32.15. What is the next step in the process for clients on the 192.168.52.0/24 subnet to reach the DHCP server?
+A. ip helper-address 172.16.32.15
+B. ip default-network 192.168.52.253
+C. ip forward-protocol udp 137
+D. ip default-gateway 192.168.52.253
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 118
+An engineer must update the configuration on two PCs in two different subnets to communicate locally with each other. One PC is configured with IP
+address 192.168.25.128/25 and the other with 192.168.25.100/25. Which network mask must the engineer configure on both PCs to enable the communication?
+A. 255.255.255.224
+B. 255.255.255.248
+C. 255.255.255.252
+D. 255.255.255.0
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 119
+Which technology allows for multiple operating systems to be run on a single host computer?
+A. virtual device contexts
+B. network port ID virtualization
+
+C. server virtualization
+D. virtual routing and forwarding
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 120
+How do traditional campus device management and Cisco DNA Center device management differ in regards to deployment?
+A. Cisco DNA Center device management can deploy a network more quickly than traditional campus device management.
+B. Cisco DNA Center device management can be implemented at a lower cost than most traditional campus device management options.
+C. Traditional campus device management allows a network to scale more quickly than with Cisco DNA Center device management.
+D. Traditional campus device management schemes can typically deploy patches and updates more quickly than Cisco DNA Center device management.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 121
+Which type of address is shared by routers in a HSRP implementation and used by hosts on the subnet as their default gateway address?
+A. multicast address
+B. Ioopback IP address
+C. virtual IP address
+D. broadcast address
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 122
+What event has occurred if a router sends a notice level message to a syslog server?
+A. An interface line has changed status.
+B. An lCMP connection has been built.
+C. A certificate has expired.
+D. A TCP connection has been torn down.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 123
+What is an expected outcome when network management automation is deployed?
+A. Custom applications are needed to configure network devices.
+B. Software upgrades are performed from a central controller.
+C. A distributed management plane must be used.
+D. Complexity increases when new device configurations are added.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 124
+Which selections must be used on the WLC when implementing a RADIUS server for wireless authentication?
+A. Client Exclusion and SSH
+B. 802.1X and the MAC address of the server
+C. Network Access Control State and SSH
+D. AAA Override and the IP address of the server
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 125
+What is one reason to configure a trunk port that connects to a WLC distribution port?
+
+A. allow multiple VLANs to be used in the data path
+B. permit multiple VLANs to provide out-of-band management
+C. eliminate redundancy with a link failure in the data path
+D. provide redundancy in the event of a link failure for out-of-band management
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 126
+Which QoS feature drops traffic that exceeds the committed access rate?
+A. FIFO
+B. Weighted fair queuing
+C. policing
+D. shaping
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 127
+What mechanism carries multicast traffic between remote sites and supports encryption?
+A. lPsec over ISATAP
+B. GRE
+C. GRE over lPsec
+D. ISATAP
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 128
+Refer to the exhibit. What are the two steps an engineer must take to provide the highest encryption and authentication using domain credentials from LDAP?
+(Choose two.)
+A. Select PSK under Authentication Key Management
+B. Select Static-WEP+802.1X on Layer 2 Security.
+C. Select WPA+WPA2 on Layer 2 Security.
+D. Select 802.1X from under Authentication Key Management.
+E. Select WPA Policy with TKIP Encryption.
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 129
+What are two characteristics of a small office /home office connection environment? (Choose two.)
+A. It supports between 50 and 100 users.
+B. It requires 10Gb ports on all uplinks.
+C. It requires a core, distribution, and access layer architecture.
+D. A router port connects to a broadband connection.
+E. It supports between 1 and 50 users.
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 130
+What provides connection redundancy, increased bandwidth, and load sharing between a wireless LAN controller and a Layer 2 switch?
+A. VLAN trunking
+B. tunneling
+C. first hop redundancy
+D. link aggregation
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 131
+How do AAA operations compare regarding user identification, user services, and access control?
+A. Authorization Identifies users, and authentication provides access control.
+B. Accounting tracks user services, and authentication provides access control.
+C. Authentication identifies users, and accounting tracks user services.
+D. Authorization provides access control, and authentication tracks user services.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 132
+Refer to the exhibit. After the configuration is applied, the two routers fail to establish an OSPF neighbor relationship. What is the reason for the
+problem?
+A. Router2 is using the default hello timer.
+B. The network statement on Router1 is misconfigured.
+C. The OSPF router IDs are mismatched.
+D. The OSPFprocess IDs are mismatched.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 133
+
+A network engineer must create a diagram of a multivendor network. Which command must be configured on the Cisco devices so that the topology of the network
+can be mapped?
+A. Device(config)# lldp run
+B. Device(config)# flow-sampler-map topology
+C. Device(config)# cdp run
+D. Device(config-if)# cdp enable
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 134
+Refer to the exhibit. What is the prefix length for the route that router1 will use to reach host A?
+A. /25
+B. /29
+C. /28
+D. /27
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 135
+After a recent security breach and a RADIUS failure, an engineer must secure the console port of each enterprise router with a local username and
+password. Which configuration must the engineer apply to accomplish this task?
+A. B.
+C.
+
+D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 136
+In a cloud-computing environment, what is rapid elasticity?
+A. control and monitoring of resource consumption by the tenant
+B. self-service of computing resources by the tenant
+C. automatic adjustment of capacity based on need
+D. pooling resources in a multitenant model based on need
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 137
+When OSPF learns multiple paths to a network, how does it select a route?
+A. It counts the number of hops between the source router and the destination to determine the route with the lowest metric.
+B. It multiplies the active K values by 256 to calculate the route with the lowest metric.
+C. It divides a reference bandwidth of 100 Mbps by the actual bandwidth of the exiting interface to calculate the route with the lowest cost
+D. For each exixting interface, it adds the metric from the source router to the destination to calculate the route with the lowest bandwidth
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 138
+Refer to the, exhibit. What action establishes the OSPF neighbor relationship without forming an adjacency?
+A. modify hello interval
+B. modify priority
+C. modify network type
+D. modify process ID
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 139
+
+Refer to the exhibit. What is represented beginning with line 1 and ending with line 5?
+A. Array
+B. Key
+C. Object
+D. Value
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 140
+Which action is taken by a switch port enabled for PoE power classification override?
+A. As power usage on a PoE switch port is checked, data flow to the connected device is temporarily paused
+B. If a switch determines that a device is using less than the minimum configured power, it assumes the device has failed and disconnects it.
+C. Should a monitored port exceed the maximum administrative value for power, the port is shut down and err-disabled.
+D. When a powered device begins drawing power from a PoE switch port, 3 syslog message is generated.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 141
+What are two benefits of FHRPs? (Choose two.)
+A. They enable automatic failover of the default gateway.
+B. They allow encrypted traffic.
+C. They are able to bundle muftlple ports to increase bandwidth.
+D. They allow multiple devices to serve as a single virtual gateway for clients in the network.
+E. They prevent loops in the Layer 2 network.
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 142
+What is a reason to implement LAG on a Cisco WLC?
+A. Provide link redundancy and load balancing.
+B. Increase security and encrypt management frames.
+C. Allow for stateful and link-state failover.
+D. Enable connected switch ports to fail over and use different VLANs.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 143
+Refer to the exhibit. An engineer must configure a floating static route on an external EIGRP network. The destination subnet is the /29
+on the LAN interface of R86. Which command must be executed on R14?
+A. Ip route 10.73.65.66 0.0.0.224 10.80.65.0 255
+
+B. lp route 10.80.65.0 255.255.255.240 fa0/1 89
+C. Ip route 10.80.65.0 255.255.255.248 10.73.65.66 171
+D. Ip route 10.80.65.0 255.255.248.0 10.73.65.66 1
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 144
+Under which condition is TCP preferred over UDP?
+A. UDP is used when data is highly interactive, and TCP is used when data is time-sensitive.
+B. UDP is used when low latency is optimal, and TCP is used when latency is tolerable.
+C. TCP is used when dropped data is more acceptable, and UDP is used when data is accepted out-of-order.
+D. TCP is used when data reliability is critical, and UDP is used when missing packets are acceptable.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 145
+Which two spanning-tree states are bypassed on an interface running PortFast? (Choose two.)
+A. listening
+B. blocking
+C. forwarding
+D. disabled
+E. learning
+Correct Answer: AE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 146
+Which level of severity must be set to get informational syslogs?
+A. Alert
+B. Critical
+C. Debug
+D. Notice
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 147
+Refer to the exhibit. What is the subnet mask of the route to the 10.10.13.160 prefix?
+
+A. 255.255.255.128
+B. 255.255.255.248
+C. 255.255.248.0
+D. 255.255.255.240
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 148
+What is the primary purpose of private address space?
+A. reduce network complexity
+B. limit the number of nodes reachable via the Internet
+C. simplify the addressing in the network
+D. conserve globally unique address space
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 149
+What is a DHCP client?
+A. a server that dynamically assigns IP addresses to hosts.
+B. a host that is configured to request an IP address automatically
+C. a router that statically assigns IP addresses to hosts.
+D. a workstation that requests a domain name associated with its IP address
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 150
+Refer to the exhibit. What is missing from this output for it to be executed?
+A. double quotes (" ") around the "Cisco Devices" string
+B. curly brace (} ) at the end
+C. square bracket ( [ ) at the beginning
+D. exclamation point (i) at the beginning of each line
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 151
+What causes a port to be placed in the err-disabled state?
+A. nothing plugged into the port
+B. link flapping
+C. shutdown command issued on the port
+D. latency
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 152
+Which two HTTP methods are suitable for actions performed by REST-based APls? (Choose two.)
+A. REMOVE
+B. REDIRECT
+C. GET
+D. POP
+E. POST
+Correct Answer: CE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 153
+Which mode must be set for APs to communicate to a Wireless LAN Controller using the Control and Provisioning of Wireless Access Points (CAPWAP) protocol?
+A. route
+B. bridge
+C. lightweight
+D. autonomous
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 154
+Router R1 must send all traffic without a matching routing-table entry to 192.168.1.1. Which configuration accomplishes this task?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 155
+What does the implementation of a first-hop redundancy protocol protect against on a network?
+A. spanning-tree loops
+B. default gateway failure
+C. BGP neigthr flapping
+D. root-bridge loss
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 156
+
+Refer to the exhibit. Router R1 must be configured to reach the 10.0.3.0/24 network from the 10.0.1.0/24
+segment. Which command must be used to configure the route?
+A. ip route 10.0.3.0 0.255.255.255 10.0.4.2
+B. route add 10.0.3.0 0.255.255.255 10.0.4.2
+C. route add 10.0.3.0 mask 255.255.255.0 10.0.4.3
+D. ip route 10.0.3.0 255.255.255.0 10.0.4.3
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 157
+Refer to the exhibit. The default-information originate command is configured under the R1 OSPF configuration. After testing, workstations or VLAN 20
+at Site B cannot reach a DNS server on the internet. Which action corrects the configuration issue?
+A. Add the default-information originate command on R2
+B. Add the always keyword to the default-information originate command on R1
+C. Configure the ip route 0.0.0.0 0.0.0.0 1010.102 command on R2
+D. Configure the ip route 0.0.0.0 0.0.0.0 10.10.10.18 Command on R1
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 158
+What is the function of a controller in a software-defined network?
+A. fragmenting and reassembling packets
+B. forwarding packets
+C. setting packet-handling policies
+D. multicast replication at the hardware level
+Correct Answer: C
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 159
+What does a switch do when it receives a frame whose destination MAC address is missing from the MAC address table?
+A. It updates the CAM table with the destination MAC address of the frame.
+B. It appends the table with a static entry for the MAC and shuts down the port.
+C. It floods the frame unchanged across all remaining ports in the incoming VLAN.
+D. It changes the checksum of the frame to a value that indicates an invalid frame.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 160
+Refer to the exhibit. What commands are needed to add a subinterface to Ethernet0/0 R1 to allow for VLAN 20, with lP address 10.20.20.1/24?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 161
+Which action must be taken when password protection is implemented?
+A. Include special characters and make passwords as long as allowed.
+B. Use less than eight characters in length when passwords are complex.
+C. Store passwords as contacts on a mobile device with single-factor authentication.
+D. Share passwords with senior IT management to ensure proper oversight
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 162
+What is the role of a firewall in an enterprise network?
+A. forwards packets based on stateless packet inspection
+B. processes unauthorized packets and allows passage to less secure segments of the network
+C. explicitly denies all packets from entering an administrative domain
+D. determines which packets are allowed to crass from unsecured to secured networks
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 163
+Which two actions are performed by the Weighted Random Early Detection mechanism? (Choose two.)
+A. It drops lower-priority packets before it drops higher-priority packets.
+B. It supports protocol discovery.
+C. lt guarantees the delivery of high-priority packets.
+D. It can mitigate congestion by preventing the queue from filing up.
+E. It can identity different flows with a high level of granularity.
+Correct Answer: AD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 164
+What is the functionality of the Cisco DNA Center?
+A. software-defined controller for automation of devices and services
+B. console server that permits secure access to all network devices
+C. data center network policy controller
+D. IP address pool distribution scheduler
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 165
+Refer to the exhibit. Switch AccSw2 has just been added to the network along with PC2. All VLANs have been implemented on
+AccSw2. How must the ports on AccSw2 be configured to establish Layer 2 connectivity between PC1 and PC2?
+A. B.
+C.
+
+D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 166
+What is the PUT method within HTTP?
+A. lt replaces data at the destination.
+B. It displays a web site
+C. It is a nonidernpotent operation
+D. It is a read-only operation
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 167
+Which access point mode relies on a centralized controller for management, roaming, and SSID configuration?
+A. Autonomous mode
+B. Repeater mode
+C. Bridge mode
+D. Lightweight mode
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 168
+Which action must be taken to assign a global unicast IPv6 address on an interface that is derived from the MAC address of that interface?
+A. explicitly assign a link-local address
+B. enable SLAAC on an interface
+C. disable the EU-64 bit process
+D. configure a stateful DHCPv6 server on the network
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 169
+How does Rapid PVST+ create a fast loop-free network topology?
+A. It maps multiple VLANs into the same spanning-tree instance.
+B. It requires multiple links between core switches.
+C. It generates one spanning-tree instance for each VLAN.
+D. It uses multiple active paths between end stations.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 170
+Which command must be entered to configure a DHCP relay?
+A. ip dhcp relay
+B. ip helper-address
+C. ip dhcp pool
+D. ip address dhcp
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 171
+The clients and DHCP server reside on different subnets. Which command must be used to forward requests and replies between clients on the 10.10.0.1/24
+subnet and the
+DHCP server at 192.168.10.1?
+A. ip default-gateway 192.168.10.1
+B. ip helper-address 192.168.10.1
+C. ip route 192.168.10.1
+D. ip dhcp address 192.168.10.1
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 172
+Refer to the exhibit. An engineer must configure GigabitEthermet1/1 to accommodate voice and data traffic. Which configuration accomplishes this
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 173
+A router received three destination prefixes: 10.0.0.0/8, 10.0.0.0/16, and 10.0.0.0/24. When the show ip route command is executed, which output does
+it return?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 174
+Which field within the access-request packet is encrypted by RADIUS?
+A. authorized services
+B. authenticator
+C. username
+D. Password
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 175
+Which WLC management connection type is vulnerable to man-in-the-middle attacks?
+A. Telnet
+B. SSH
+C. HTTPS
+D. Console
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 176
+What is the definition of backdoor malware?
+A. malicious program that is used to launch other malicious programs
+B. malicious code that infects a user machine and then uses that machine to send spam
+C. malicious code with the main purpose of downloading other malicious code
+D. malicious code that is installed onto a computer to allow access by an unauthorized user
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 177
+When a switch receives a frame for an unknown destination MAC address, how is the frame handled?
+A. forwarded to the first available port
+B. broadcast to all pons on the switch
+C. inspected and dropped by the switch
+D. flooded to all ports except the origination port
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 178
+Which HTTP status code is returned after a successful REST API request?
+A. 500
+B. 404
+C. 200
+D. 301
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 179
+What is the same for both copper and fiber interfaces when using SFP modules?
+A. They accommodate single-mode and multi-mode in a single module
+B. They support an inline optical attenuator to enhance signal strength
+C. They provide minimal interruption to services by being hot-swappable
+D. They offer reliable bandwidth up to 100 Mbps in half duplex mode
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 180
+Refer to the exhibit. Which configuration establishes a Layer 2 LACP EtherChannel when applied to both switches?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 181
+Refer to the exhibit. An engineer configured the New York router with static routes that paint to the Atlanta and Washington sites. Which command must be
+configured on the Atlanta
+and Washington routers so that both sites are able to reach the Ioopback2 interface on the New York router?
+A. ipv6 route ::/0 2000::2
+B. ipv6 route ::/0 Serial 0/0/0
+C. ip route 0.0.0.0.0.0.0.0 Serial 0/0/0
+D. ipv6 route ::./0>Serial 0/0/1
+E. ipv6 route 0/0 Serial 0/0/0
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 182
+Which WPA mode uses PSK authentication?
+A. Personal
+B. Local
+C. Client
+D. Enterprise
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 183
+What describes a northbound REST API for SDN?
+
+A. application-facing interface for SNMP GET requests
+B. network-element-facing interface for GET, POST, PUT, and DELETE methods
+C. network-element-facing interface forthe control and data planes
+D. application-facing interface for GET, POST, PUT, and DELETE methods
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 184
+Which configuration must be applied to the interface?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 185
+Why is UDP more suitable than TCP for applications that require low latency, such as VolP?
+A. TCP uses congestion control for efficient packet delivery, and UDP uses flow control mechanisms for the delivery of packets.
+B. TCP sends an acknowledgment for every packet that is received, and UDP operates without acknowledgments.
+C. UDP uses sequencing data for packets to arriveVln order, and TCP offers the capability to receive packets in random order.
+D. UDP reliably guarantees delivery of all packets, and TCP drops packets under heavy load.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 186
+What occurs when overlapping Wi-Fi channels are implemented?
+A. Network communications are open to eavesdropping.
+B. Users experience poor wireless network performance.
+C. Wireless devices are unable to distinguish between different SSIDs.
+D. The wireless network becomes vulnerable to unauthorized access.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 187
+What are two benefits for using private IPv4 addressing? (Choose two.)
+A. They offer Internet connectivity to endpoints on private networks
+B. They allow for lntemet access from loT devices.
+C. They supply redundancy in the case of failure.
+D. They provide a layer of security from Internet threats.
+E. They alleviate the shortage of public IPv4 addresses.
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 188
+Which group of channels in the 802.11b/g/n/aclax 2.4 GHz frequency bands are nonoverlapping channels?
+A. channels 1, 6, and 10
+B. channels 1, 5, and 10
+
+C. channels 1, 6, and 11
+D. channels 1, 5, and 11
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 189
+A manager asks a network engineer to recommend a cloud service model so that employees do not spend time installing, managing, and updating
+software that is only used occasionally. Which cloud service model does the engineer recommend?
+A. platfonn-as-a-service
+B. lnfrastructure-as-a-service
+C. business process as a service to support different types of service
+D. software-as-a-service
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 190
+How is a configuration change made to a wireless AP in lightweight mode?
+A. HTTPS connection directly to the out-of-band address of the AP
+B. CAPWAP/LWAPP connection via the parent WLC
+C. SSH connection to the management IP of the AP
+D. EolP connection via the parent WLC
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 191
+What are two functions of a server on a network? (Choose two)
+A. runs the same operating system in order to communicate with other servers
+B. achieves redundancy by exclusively using virtual server clustering
+C. runs applications that send and retrieve data for workstations that make requests
+D. handles requests from multiple workstations at the same time
+E. housed solely in a data center that is dedicated to a single client
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 192
+Which occurs when PortFast is enabled on an interface that is connected to another switch?
+A. Root port choice and spanning tree recalculation are accelerated when a switch link goes down.
+B. Spanning-tree may fail to detect a switching loop in the network that causes broadcast storms.
+C. VTP is allowed to propagate VLAN configuration information from switch to switch automatically.
+D. After spanning tree converges, PortFast shuts down any port that receives BPDUs.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 193
+Which set of actions satisfy the requirement for multifactor authentication?
+A. The user enters a PIN into an RSA token, and then enters the displayed RSA key on a login screen
+B. The user swipes a key fob, then clicks through an email link
+C. The user enters a user name and password, and then re-enters the credentials on a second screen.
+D. The user enters a user name and password, and then clicks a notification an authentication app on a mobile device.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 194
+
+Refer to the exhibit. Which prefix did router R1 learn from internal EIGRP?
+A. 192.168.3.0/24
+B. 172.16.1.0/24
+C. 192.168.1.0/24
+D. 192.168.2.0/24
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 195
+Which QoS traffic handling technique retains excess packets in a queue and reschedules these packets for later transmission when the configured
+maximum bandwidth has been surpassed?
+A. weighted random early detection
+B. traffic prioritization
+C. traffic policing
+D. traffic shaping
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 196
+Refer to the exhibit. An access list is created to deny Telnet access from host PC-1 to RTR-1 and allow access from all other hosts. A Telnet attempt from PC-2
+gives
+this message: "% Connection refused by remote host.“ Without allowing Telnet access from PC-1, which action must be taken to permit the traffic?
+A. Add the access-list 10 permit any command to the configuration.
+B. Remove the access-class 10 in command from line vty 0 4.
+C. Remove the password command from line vty 0 4.
+D. Add the ip access-group 10 out command to interface g0/0
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 197
+Which configuration script meets the requirements?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 198
+Which set of methods is supported with the REST APl?
+A. GET, PUT, ERASE, CHANGE
+B. GET, POST, MOD, ERASE
+C. GET, PUT, POST, DELETE
+D. GET, POST, ERASE, CHANGE
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 199
+Which two characteristics are representative of virtual machines (VMs)? (Choose two.)
+A. A VM on a hypervisor is automatically interconnected to other VMs.
+B. A VM on an individual hypervisor shares resources equally
+C. Each VM runs independently of any other VM in the same hypervisor.
+D. multiple VMs operate on the same underlying hardware.
+E. Each VMs operating system depends on its hypervisor.
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 200
+Refer to the exhibit. Site A was recently connected to site B over a new single-mode fiber path. Users at site A report intermittent
+connectivity issues with applications hosted at site
+B. What is the reason for the problem?
+A. The wrong cable type was used to make the connection.
+B. Heavy usage is causing high latency.
+C. Physical network errors are being transmitted between the two sites.
+D. An incorrect type of transceiver has been inserted into a device on the link.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 201
+Refer to the exhibit. What is the effect of this configuration?
+A. The switch port remains administratively down until the interface is connected to another switch
+B. Dynamic ARP Inspection is disabled because the ARP ACL is missing
+C. The switch port remains down until it is configured to trust or untrust incoming packets
+D. The switch port interface trust state becomes untrusted
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 202
+Which access point type must be used?
+A. autonomous
+B. cloud-based
+C. mesh
+D. lightweight
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 203
+Which two transport layer protocols carry syslog messages? (Choose two.)
+A. TCP
+B. RTP
+C. UDP
+D. IP
+E. ARP
+Correct Answer: AC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 204
+Refer to the exhibit. The show ip ospf interface command has been executed on R1. How is OSPF configured?
+A. The interface is not participating in OSPF
+B. The default Hello and Dead timers are in use.
+C. There are six OSPF neighbors on this interface
+D. A point-to-point network type is configured
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 205
+What facilitates a Telnet connection between devices by entering the device name?
+A. Syslog
+B. SNMP
+C. NTP
+D. DNS lookup
+Correct Answer: D
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 206
+What are two functions of a Layer 2 switch? (Choose two)
+A. moves packets between different VLANs
+B. acts as a central point for association and authentication servers
+C. selects the best route between networks on a WAN
+D. makes forwarding decisions based on the MAC address of a packet
+E. moves packets within a VLAN
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 207
+Refer to the exhibit. A packet sourced from 172.16.32.254 is destined for 172.16.32.8. What is the subnet mask of the preferred destination route?
+A. 255.255.255.252
+B. 255.255.224.0
+C. 255.255.255.192
+D. 255.255.255.0
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 208
+Refer to the exhibit. Load-balanced traffic is coming in from the WAN destined to a host at 172.16.1.190. Which next-hop is used by
+the router to forward the request?
+A. 192.168.7.35
+B. 192.168.7.40
+C. 192.168.7.7
+D. 192.168.7.4
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 209
+Which plane is centralized in software-defined networking?
+A. services
+B. application
+C. data
+
+D. control
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 210
+Refer to the exhibit. Which configuration issue is preventing the OSPF neighbor relationship from being established between the two routers?
+A. R1 interface Gi1/0 has a larger MTU size.
+B. R1 has an incorrect network command for interface Gi1/0.
+C. R2 is using the passive-interface default command.
+D. R2 should have its network command in area 1.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 211
+SW1 supports connectivity for a lobby conference room and must be secured. The engineer must limit the connectivity from PC1 to
+the SW1 and SW2 network. The MAC addresses allowed must be limited to two. Which configuration secures the conference room
+connectivity?
+
+A.
+B. C.
+D. Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 212
+Why would a network administrator choose to implement automation in a network environment?
+A. to deploy the management plane separately from the rest of the network
+B. to centralize device information storage
+C. to implement centralized user account management
+D. to simplify the process of maintaining a consistent configuration state across all devices
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 213
+What is a benefit of VRRP?
+A. It provides traffic load balancing to destinations that are more than two hops from the source.
+B. It allows neighbors to share routing table information between each other.
+C. It prevents loops in a Layer 2 LAN by forwarding all traffic to a root bridge, which then makes the final forwarding decision
+D. It provides the default gateway redundancy on a LAN using two or more routers
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 214
+Refer to the exhibit. An engineer configures interface fa0/1 on SW1 and SW2 to pass traffic from two different VLANs. For security reasons, company
+policy requires the native VLAN to be set to a non-default value. Which configuration must be used?
+
+A.
+B. C.
+D. Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 215
+Which type of IPv4 address type helps to conserve the globally unique address classes?
+A. Multicast
+B. Public
+C. private
+D. Loopback
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 216
+What is a zero-day exploit?
+A. It is when the network is saturated with malicious traffic that overloads resources and bandwidth.
+B. It is when the perpetrator inserts itself in a conversation between two parties and captures or alters data.
+C. It is when a new network vulnerability is discovered before a fix is available.
+D. It is when an attacker inserts malicious code into a SQL server.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 217
+Refer to the exhibit. The DHCP server is configured with a DHCP pool for each of the subnets represented. Which command must be configured on
+switch SW1 to allow DHCP clients on VLAN 10 to receive dynamic IP addresses from the DHCP server?
+A. SW1(config-if)# ip helper-address 192.168.20.2
+B. SW1(config-if)# ip helper-address 192.168.10.2
+C. SW1(config-if)# ip helper-address 192.168.10.1
+D. SW1(config-if)# ip helper-address 192.168.20.1
+Correct Answer: A
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 218
+Refer to the exhibit. R1 learns all routes via OSPF. Which command configures a backup static route on R1 to reach the 192.168.20.0/24 network via R3?
+A. R1(config)# ip route 192.168.20.0 255.255.255.0 192.168.30.2
+B. R1(config)# ip route 192.168.20.0 255.255.255.0 192.168.30.2 90
+C. R1(config)# ip route 192.168.20.0 255.255.0.0192.168.30.2.
+D. R1 (config)# ip route 192.168.20.0 255.255.255.0 192.168.30.2 111
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 219
+What is the purpose of classifying network traffic in QoS?
+A. configures traffic-matching rules on network devices
+B. services traffic according to its class
+C. writes the class identifier of a packet to a dedicated field in the packet header
+D. identifies the type of traffic that will receive a particular treatment
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 220
+What does physical access control regulate?
+A. access to networking equipment and facilities
+B. access to computer networks and file systems
+C. access to servers to prevent malicious activity
+D. access to specific networks based on business function
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 221
+Refer to the exhibit The router R1 is in the process of being configured. Routers R2 and R3 are configured correctly for the new environment. Which
+
+two commands must be configured on R1 for PC1 to communicate to all PCs on the 10.10.10.0/24 network?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 222
+Which WAN access technology is preferred for a small office/home office architecture?
+A. Integrated Services Digital Network switching
+B. broadband cable access
+C. frame-relay packet switching
+D. dedicated point-to-point leased line
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 223
+Which protocol does a REST API use to communicate?
+A. HTTP
+B. STP
+C. SSH
+D. SNMP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 224
+Refer to the exhibit. The New York router is configured with static routes pointing to the Atlanta and Washington sites. Which two tasks must be
+performed so that the Serial0/0/0 interfaces on the Atlanta and Washington routers can reach one another? (Choose two.)
+A. Configure the ipv6 route 2023::/126 2012::1 command on the Atlanta router
+B. Configure the ipv6 route 2023:/126 2012::2 command on the Atlanta router.
+C. Configure the ipv6 route 2012:/126 2023::1 command on the Washington router.
+D. Configure the ipv6 route 2012::/126 s0/0/0 command on the Atlanta router.
+E. Configure the ipv6 route 2012::/126 2023::2 command on the Washington router
+Correct Answer: BE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 225
+Which feature on the Cisco Wireless LAN Controller when enabled restricts management access from specific networks?
+
+A. RADIUS
+B. CPU ACL
+C. Flex ACL
+D. TACACS
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 226
+Refer to the exhibit.With which metric was the route to host 172.16.0.202 learned?
+A. 0
+B. 38443
+C. 3184439
+D. 110
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 227
+Which command creates a static NAT binding for a PC address of 10.1.1.1 to the public routable address 209.165.200.225 assigned to the PC?
+A. R1(config)#ip nat outside source static 10.1.1.1 209.165.200.225
+B. R1(config)#ip nat inside source static 209.165.200.225 10.1.1.1
+C. R1(config)#ip nat outside source static 209.165.200.225 10.1.1.1
+D. R1(config)#ip nat inside source static 10.1.1.1 209.165.200.225
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 228
+What is a function of Opportunistic Wireless Encryption in an environment?
+A. protect traffic on open networks
+B. provide authentication
+C. offer compression
+D. increase security by using a WEP connection
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 229
+What is a capability of FTP in network management operations?
+A. offers proprietary support at the session layer when transferring data
+B. encrypts data before sending between data resources
+C. devices are directly connected and use UDP to pass file information
+D. uses separate control and data connections to move files between server and client
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 230
+A network engineer must configure an interface with IP address 10.10.10.145 and a subnet mask equivalent to 1111111 1.1111111 1.
+11111111.11111000. Which subnet mask must the engineer use?
+
+A. /29
+B. /28
+C. /30
+D. /27
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 231
+Refer to the exhibit. Which two configurations must the engineer apply on this network so that R1 becomes the DR? (Choose two.)
+A. B.
+C. D.
+E. Correct Answer: CE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 232
+
+Refer to the exhibit. To which device does Router1 send packets that are destined to host 10.10.13.165?
+A. Router5
+B. Router3
+C. Router2
+D. Router4
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 233
+An engineer observes high usage on the 2.4GHz channels and lower usage on the 5GHz channels. What must be configured to allow clients to
+preferentially use 5GHz access points?
+A. Re-Anchor Roamed Clients
+B. 11ac MU-MIMO
+C. EAP Split Tunnel
+D. Client Band Select
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 234
+Which component controls and distributes physical resources for each virtual machine?
+A. Hypervisor
+B. CPU
+C. physical enclosure
+D. OS
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 235
+Refer to the exhibit. How many arrays are present in the JSON data?
+A. nine
+B. One
+C. Three
+D. Six
+Correct Answer: C
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 236
+Which cable type must be used when connecting a router and switch together usmg these:
+1. Pins 1 and 2 are receivers and pins 3 and 6 are transmitters
+2. Auto detection MDI-X is unavailable
+A. rollover
+B. crossover
+C. console
+D. straight-through
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 237
+Refer to the exhibit. PC1 tries to ping PC3 for the first time and sends out an ARP to S1. Which action is taken by S1?
+A. It forwards it out interface G0/2 only.
+B. It forwards it out G0/3 only.
+C. It drops the frame.
+D. It is flooded out every port except G0/0.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 238
+Which two encoding methods are supported by REST APIs? (Choose two.)
+A. EBCDIC
+B. SGML
+C. JSON
+D. XML
+E. YAML
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 239
+Which communication interaction takes place when a southbound API Is used?
+A. between network applications and switches and routers on the network
+B. between the SDN controller and PCs on the network
+C. between the SDN controller and services and applications on the network
+D. between the SDN controller and switches and routers on the network
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 240
+
+Refer to the exhibit An engineer booted a new switch and applied this configuration via the console port. Which additional configuration must be applied
+to allow administrators to authenticate directly to enable privilege mode via Telnet using a local username and password?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 241
+Refer to the exhibit. An extended ACL has been configured and applied to router R2. The configuration failed to work as intended. Which two changes
+stop outbound traffic on TCP ports 25 and 80 to 10.0.20.0/26 from the 10.0.10.0/26 subnet while still allowing all other traffic? (Choose two)
+A. Add a "permit ip any any" statement to the beginning of ACL 101 for allowed traffic.
+B. The ACL must be moved to the Gi0/1 interface outbound on R2.
+C. Add a "permit ip any any" statement at the end of ACL 101 for allowed traffic.
+D. The source and destination lPs must be swapped in ACL 101.
+E. The ACL must be configured the Gi0/2 interface inbound on R1.
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 242
+Which Rapid PVST+ feature should be configured on a switch port to immediately send traffic to a connected server as soon as it is active?
+A. portfast
+B. loop guard
+C. uplinkfast
+D. BPDU guard
+Correct Answer: A
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 243
+Which networking function occurs on the data plane?
+A. forwarding remote client/server traffic
+B. sending and receiving OSPF Hello packets
+C. processing inbound SSH management traffic
+D. facilitates spanning-tree elections
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 244
+What is a function of Layer 3 switches?
+A. They transmit broadcast trafic when operating in Layer 3 mode exclusively
+B. They forward Ethernet frames between VLANs using only MAC addresses.
+C. They route trafic between devices in diferent VLANs.
+D. They move frames between endpoints limited to IP addresses.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 245
+Which port type supports the spanning-tree portfast command without additional configuration?
+A. Layer 3 subinterfaces
+B. trunk ports
+C. Layer 3 main Interfaces
+D. access ports
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 246
+What is a function performed by a web server?
+A. securely store files for FTP access
+B. authenticate and authorize a user's identity
+C. send and retrieve email from client devices
+D. provide an application that is transmitted over HTTP
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 247
+Refer to the exhibit. A network engineer is configuring a WLAN to connect with the 17.16.10.0/24 network on VLAN 20. The engineer wants to limit the
+number of devices that connect to the WLAN on the USERWL SSID to 125. Which configuration must the engineer perform on the WLC?
+A. In the Advanced configuration, set the DTIM value to 125.
+B. In the WLAN configuration, set the Maximum Allowed Clients value to 125.
+C. In the Management Software activation configuration, set the Clients value to 125.
+D. In the Controller IPv6 configuration, set the Throttle value to 125.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 248
+Which two commands must be configured to complete this task? (Choose two.)
+A. SW(config-if)#switchport port-security violation shutdown
+B. SW(config-if)#switchport port-security mac-address 0010.XXXX.XXXX
+C. SW(config-if)#switchport port-security maximum 2
+D. SW(config-if)#switchport port-security mac-address sticky
+E. SW(config-if)#switchport port-security violation restrict
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 249
+What does an SDN controller use as a communication protocol to relay forwarding changes to a southbound API?
+A. XML
+B. REST
+C. OpenFlow
+D. Java
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 250
+How must the interconnecting ports be configured?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 251
+
+Refer to the exhibit. An engineer is configuring a new router on the network and applied this configuration. Which additional configuration allows the PC
+to obtain its IP address from a DHCP server?
+A. Configure the ip helper-address 172.16.2.2 command under interface Gi0/0.
+B. Configure the ip address dhcp command under interface Gi0/0.
+C. Configure the ip dhcp relay information command under interface Gi0/1.
+D. Configure the ip dhcp smart-relay command globally on the router.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 252
+Refer to the exhibit. Which action is expected from SW1 when the untagged frame is received on the GigabitEthernet0/1 interface?
+A. The frame is processed in VLAN 1.
+B. The frame is dropped.
+C. The frame is processed in VLAN 11.
+D. The frame is processed in VLAN 5.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 253
+What are two facts that differentiate optical-fiber cabling from copper cabling? (Choose two.)
+A. It provides greater throughput options.
+B. It is less expensive when purchasing patch cables.
+C. It has a greater sensitivity to changes in temperature and moisture.
+D. It carries electrical current further distances for PoE devices.
+E. It carries signals for longer distances.
+Correct Answer: AE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 254
+Which type of security program is violated when a group of employees enters a building using the ID badge of only one person?
+
+A. physical access control
+B. user awareness
+C. network authorization
+D. intrusion detection
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 255
+Refer to the exhibit. A network engineer must configure communication between PC A and the File Server. To prevent interruption for any
+other communication swhich command must be configured?
+A. switchport trunk allowed vlan add 13
+B. switchport trunk allowed vlan 12
+C. switchport trunk allowed vlan none
+D. switchport trunk allowed vlan remove 10-11
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 256
+What is the purpose of the ip address dhcp command?
+A. to configure an interface as a DHCP relay
+B. to configure an interface as a DHCP client
+C. to configure an interface as a DHCP helper
+D. to configure an interface as a DHCP server
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 257
+
+Refer to the exhibit. How should the configuration be updated to allow PC1 and PC2 access to the internet?
+A. Add either the ip nat (inside | outside) command under both interfaces.
+B. Remove the overload keyword from the ip nat inside source command.
+C. Modify yhe configured number of the second access list.
+D. Change the ip nat inside source command to use interface GigabitEthernet0/0.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 258
+Which technology must be implemented to configure network device monitoring with the highest security?
+A. NetFIow
+B. SNMPv3
+C. Syslog
+D. lP SLA
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 259
+Which wireless security protocol relies on Perfect Forward Secrecy?
+A. WPA3
+B. WPA
+C. WPA2
+D. WEP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 260
+Which Cisco proprietary protocol ensures traffic recovers immediately, transparently, and automatically when edge devices or access circuits fail?
+A. SLB
+B. FHRP
+C. VRRP
+D. HSRP
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 261
+
+Refer to the exhibit. After applying this configuration to router R1, a network engineer is verifying the implementation. If all links are operating
+normally, and the engineer sends a series of packets from PC1 to PC3, how are the packets routed?
+A. They are distributed sent round robin to interfaces S0/0/0 and S0/0/1.
+B. They are routed to 192.168.100.2.
+C. They are routed to 172.16.20.2.
+D. They are routed to 1.0.0.0.2.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 262
+In which circumstance would a network architect decide to implement a global unicast subnet instead of a unique local unicast subnet?
+A. when the subnet must be routable over the internet
+B. when the subnet does not need to be routable
+C. when the subnet must be available only within an organization
+D. when the addresses on the subnet must be equivalent to private IPv4 addresses
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 263
+What is the benefit of configuring PortFast on an interface?
+A. Real-time voice and video frames entering the interface are processed faster
+B. After the cable is connected, the interface uses the fastest speed setting available for that cable type.
+C. After the cable is connected, the interface is available faster to send and receive user data.
+D. The frames entering the interface are marked with higher priority and then processed faster by a switch
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 264
+
+Refer to the exhibit. A network engineer must block access for all computers on VLAN 20 to the web server via HTTP. All other
+computers must be able to access the web server. Which configuration when applied to switch A accomplishes this task?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 265
+Refer to the exhibit. A network administrator has been tasked with securing VTY access to a router. Which access-list entry accomplishes this task?
+
+A. access-list 101 permit tcp 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255 eq telnet
+B. access-list 101 permit tcp 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255 eq scp
+C. access-list 101 permit tcp 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255 eq https
+D. access-list 101 permit tcp 10.1.1.0 0.0.0.255 172.16.1.0 0.0.0.255 eq ssh
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 266
+Refer to the exhibit. Which change to the configuration on Switch2 allows the two switches to establish an EtherChannel?
+A. Change the protocol to PAgP and use auto mode.
+B. Change the LACP mode to desirable.
+C. Change the LACP mode to active.
+D. Change the protocol to EtherChannel mode on.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 267
+What is the collapsed layer in collapsed core architectures?
+A. distribution and access
+B. core and distribution
+C. core and WAN
+D. access and WAN
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 268
+Which network plane is centralized and manages routing decisions?
+A. policy plane
+B. data plane
+C. management plane
+D. control plane
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 269
+Which two protocols must be disabled to increase security for management connections to a WireIess LAN Controller? (Choose two)
+
+A. SSH
+B. TFTP
+C. HTTPS
+D. Telnet
+E. HTTP
+Correct Answer: DE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 270
+What uses HTTP messages to transfer data to applications residing on different hosts?
+A. OpenFlow
+B. REST
+C. OpenStack
+D. OpFlex
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 271
+Which purpose does a northbound API serve in a controller-based networking architecture?
+A. reports device errors to a controller
+B. communicates between the controller and the physical network hardware
+C. generates statistics for network hardware and traffic
+D. facilitates communication between the controller and the application
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 272
+A network administrator enabled port security on a switch interface connected to a printer. What is the next configuration action in order to allow the port to learn the
+MAC address of the printer and insert it into the table automatically?
+A. implement auto MAC address learning
+B. implement static MAC addressing
+C. enable dynamic MAC address learning
+D. enable sticky MAC addressing
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 273
+What are two benefits of network automation? (Choose two.)
+A. reduced operational costs
+B. faster changes with more reliable results
+C. increased network security
+D. fewer network failures
+E. reduced hardware footprint
+Correct Answer: AB
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 274
+Which subnet summarizes and gives the most efficient distribution of IP addresses for the router configuration?
+A. B.
+C.
+
+D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 275
+A network administrator needs to aggregate 4 ports into a single logical link which must negotiate layer 2 connectivity to ports on another switch. What must be
+configured when using active mode on both sides of the connection?
+A. LACP
+B. 802.1q trunks
+C. LLDP
+D. Cisco vPC
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 276
+What is a function of Cisco Advanced Malware Protection for a Next-Generation IPS?
+A. authenticating end users
+B. inspecting specific files and file types for malware
+C. URL filtering
+D. authorizing potentially compromised wireless traffic
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 277
+Refer to the exhibit. The router has been configured with a supernet to accommodate the requirement for 380 users on a subnet. The requirement already
+considers 30% future growth. Which configuration verifies the IP subnet on router R4?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 278
+What is a characteristic of a collapsed-core network topology?
+A. lt allows the core and distribution layers to run as a single combined layer.
+B. It enables the core and access layers to connect to one logical distribution device over an EtherChannel.
+C. It allows wireless devices to connect directly to the core layer, which enables faster data transmission.
+D. It enables all workstations in a SOHO environment to connect on a single switch with internet access.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 279
+
+Refer to the exhibit. The given Windows PC is requesting the IP address of the host at www.cisco.com. To which IP address is the request sent?
+A. 192.168.1.226
+B. 192.168.1.100
+C. 192.168.1.254
+D. 192.168.1.253
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 280
+Why is a first-hop redundancy protocol implemented?
+A. to enable multiple switches to operate as a single unit
+B. to prevent loops in a network
+C. to protect against default gateway failures
+D. to provide load-sharing for a multilink segment
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 281
+Which Layer 2 switch function encapsulates packets for different VLANs so that the packets traverse the same port and maintain traffic separation between the
+VLANs?
+A. VLAN numbering
+B. VLAN DSCP
+C. VLAN marking
+D. VLAN tagging
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 282
+
+Refer to the exhibit. Which configuration on RTR-1 denies SSH access from PC-1 to any RTR-1 interface and allows all other traffic?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 283
+What are two purposes of HSRP? (Choose two.)
+A. lt provides a mechanism for diskless clients to autoconfigure their lP parameters during boot
+B. It helps hosts entire network to reach remote subnets withouta default gateway.
+C. It improves network availability by providing redundant gateways.
+D. It passes configuration information to hosts in a TCP/lP network
+E. lt groups two or more routers to operate as one virtual router.
+Correct Answer: CE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 284
+Refer the exhibit. What is the result if Gig1/11 receives an STP BPDU?
+A. The port goes into error-disable state.
+B. The port transitions to the root port.
+C. The port transitions to STP blocking.
+D. The port immediately transitions to STP forwarding.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 285
+What describes the functionality of southbound APls?
+
+A. They convey information from the controller to the SDN applications.
+B. They communicate with the management plane.
+C. They enable communication between the controller and the network device.
+D. They use HTTP messages to communicate.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 286
+Refer to the exhibit. An engineer must configure the interface that connects to PC1 and secure it in a way that only PC1 is allowed to use the port. No VLAN tagging
+can be used except for a voice VLAN. Which command sequence must be entered to configure the switch?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 287
+Which command enables HTTP access to the Cisco WLC?
+A. config network telnet enable
+B. config certificate generate webadmin
+C. config network webmode enable
+D. config network secureweb enable
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 288
+A Cisco engineer is configuring a factory-default router with these three passwords:
+1. The user EXEC password for console access is p4ssw0rd1.
+2. The user EXEC password for Telnet access is s3cr3t2.
+3. The password for privileged EXEC mode is priv4t3p4ss.
+Which command sequence must the engineer configure?
+A. B.
+
+C.
+D. Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 289
+Refer to the exhibit. An engineer executed the script and added commands that were not necessary for SSH and now must remove the commands. Which two
+commands must be executed to
+correct the configuration? (Choose two.)
+A. no login IocaI
+B. no ip domain name ccna.cisco.com
+C. no ip name-server 198.51.100.210
+D. no service password-encryption
+E. no hostname CPE
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 290
+Which syslog severity level is considered the most severe and results in the system being considered unusable?
+A. Emergency
+B. Alert
+C. Error
+D. Critical
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 291
+
+Refer to the exhibit. The network engineer is configuring a new WLAN and is told to use a setup password for authentication instead of the RADIUS servers. Which
+additional set of tasks must
+the engineer perform to complete the configuration?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 292
+Why choose Cisco DNA Center for automated lifecycte management?
+A. to allow SSH access to all nodes in the network
+B. to perform upgrades without service interruption
+C. to provide software redundancy in the network
+D. to provide fast and accurate deployment of patches and updates
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 293
+
+Refer to the exhibit. All routers in the network are configured correctly, and the expected routes are being exchanged among the routers. Which set of routes are
+learned from neighbors and
+installed on router 2?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 294
+Refer to the exhibit. The switches are connected via a Cat5 Ethernet cable that was successfulty tested. The interfaces are configured as access ports and are both
+in a "down" status. What is
+the cause of this issue?
+A. The distance between the two switches is not supported by Cat5.
+B. The switches are configured with incompatible duplex settings.
+C. The portfast command is missing from the configuration.
+D. The speed settings on the switches are mismatched.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 295
+What is the difference between controller-based networks and traditional networks as they relate to control-plane and/or data-plane functions?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 296
+Refer to the exhibit. Router-WAN1 has a new connection via Gi0/0 to the ISP. Users running the web applications indicate that connectivity is unstable to the
+intemet What is causing
+theinterface issue?
+A. Frames are discarded due to a half-duplex negotiation.
+B. The receive buffer is full due to a broadcast storm.
+C. Small frames less than 64 bytes are rejected due to size.
+D. Broadcast packets are rejected because ARP timeout is enabled.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 297
+A switch is forwarding a frame out of all interfaces except the interface that received the frame. What is the technical term for this process?
+A. Multicast
+B. GDP
+C. Flooding
+D. ARP
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 298
+What must a network administrator consider when deciding whether to configure a new wireless network with APs in autonomous mode or APs running in cloud-
+based mode?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 299
+A network engineer is configuring a new router at a branch office. The router is connected to an upstream WAN network that allows the branch to communicate with
+the head office. The central
+time server with IP address 172.24.54.8 is located behind a firewall at the head office. Which command must the engineer configure so that the software clock of
+the new router synchronizes
+with the timeserver?
+A. ntp master 172.24.54.8
+B. ntp peer 172.24.54.8
+C. ntp client 172.24.54.8
+D. ntp server 172.24.54.8
+
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 300
+What is the RFC 4627 default encoding for JSON text?
+A. GB18030
+B. Hex
+C. UTF-8
+D. UCS-2
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 301
+Which solution is appropriate when mitigating password attacks where the attacker was able to sniff the clear-text password of the system administrator?
+A. next-generation firewall to keep stateful packet inspection
+B. ACL to restrict incoming Telnet sessions "admin" accounts
+C. IPS with a block list of known attack vectors
+D. multifactor authentication using two separate authentication sources
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 302
+Which mechanism allows WPA3 to provide a higher degree of security than its predecessors?
+A. special-character support in preshared keys
+B. certificate-based authentication
+C. automatic device pairing
+D. SAE password-based key exchange
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 303
+Which protocol does Ansible use to push modules to nodes in a network?
+A. SNMP
+B. Telnet
+C. Kerberos
+D. SSH
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 304
+Refer to the exhibit. If the network environment is operating normally, which type of device must be connected to interface fastethernet 0/1?
+A. DHCP client
+B. PC
+C. router
+D. access point
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 305
+
+Refer to the exhibit. An administrator must turn off the Cisco Discovery Protocol on the port configured with address last usable address in the 10.0.0.0/30 subnet.
+Which command
+set meets the requirement?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 306
+Refer to the exhibit. Users need to connect to the wireless network with lEEE 802.11r-compatible devices. The connection must be maintained as users travel
+between floors or to
+other areas in the building. What must be the configuration of the connection?
+A. Disable AES encryption.
+B. Enable Fast Transition and select the FT PSK option.
+C. Enable Fast Transition and select the FT 802.1X option.
+D. Select the WPA Policy option with the CCKM option.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 307
+
+Which configuration must be used?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 308
+Refer to the exhibit. An engineer is asked to configure router R1 so that it forms an OSPF single-area neighbor relationship with R2. Which command sequence
+must be
+implemented to configure the router?
+A. B.
+C.
+
+D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 309
+Refer to the exhibit. Which two values does router R1 use to identify valid routes for the R3 loopback address 1.1.1 .3/32? (Choose two.)
+A. lowest cost to reach the next hop
+B. lowest administrative distance
+C. lowest metric
+D. highest metric
+E. highest administrative distance
+Correct Answer: BC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 310
+An engineer must configure R1 for a new user account. The account must meet these requirements:
+1. It must be configured in the local database.
+2. The username is engineer2.
+3. It must use the strongest password configurable.
+Which command must the engineer configure on the router?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 311
+What is an Ansible inventory?
+A. collection of actions to perform on target devices, expressed in YAML format
+B. file that defines the target devices upon whiCh commands and tasks are executed
+C. device with Ansible installed that manages target devices
+D. unit of Python code to be executed within Ansible
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 312
+
+Which protocol is implemented when an organization must verify network performance, troubleshoot issues, and use an agent to communicate between monitoring
+tools and and
+devices?
+A. SNMP
+B. NFS
+C. FTP
+D. NTP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 313
+Refer to the exhibit. An engineer is creating a secure preshared key based SSID using WPA2 for a wireless network running on 2.4 GHz and 5 GHz. Which two
+tasks must the
+engineer perform to complete the process? (Choose two.)
+A. Select the AES option for Auth Key Management.
+B. Select the PSK option for Auth Key Management.
+C. Select the 802.1X option for Auth Key Management.
+D. Select the AES (CCMP128) option for WPA2/WPA3 Encryption.
+E. Select the WPA Policy option.
+Correct Answer: BD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 314
+Refer to the exhibit. An administrator received a call from a branch office regarding poor application performance hosted at the headquarters. Ethemet 1 is
+connected between
+Router1 and the LAN switch. What identifies the issue?
+
+A. The QoS policy is dropping traffic.
+B. There is a duplex mismatch.
+C. The MTU is not set to the default value.
+D. The link is over utilized.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 315
+What device segregates a network into separate zones that have their own security policies?
+A. firewall
+B. access poin
+C. IPS
+D. Switch
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 316
+Refer to the exhibit. An engineer must add a subnet for a new office that will add 20 users to the network. Which IPv4 network and subnet mask combination does
+the engineer
+assign to minimize wasting addresses?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 317
+Refer to the exhibit. R1 has just received a packet from host A that is destined to host
+B. Which route in the routing table is used by R1 to reach host B?
+A. B.
+C.
+
+D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 318
+What is the advantage of separating the control plane from the data plane within an SDN network?
+A. reduces cost
+B. limits data queries to the control plane
+C. decreases overall network complexity
+D. offloads the creation of virtual machines to the data plane
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 319
+A router has two static routes to the same destination network under the same OSPF process. How does the router forward packets to the destination if the next-
+hop devices are
+different?
+A. The router load-balances traffic over all routes to the destination.
+B. The router chooses the next hop with the lowest IP address.
+C. The router chooses the next hop with the lowest MAC address.
+D. The router chooses the route with the oldest age.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 320
+Refer to the exhibit. The image server and client A are running an application that transfers an extremely high volume of data between the two. An engineer is
+configuring a dedicated
+circuit between routers R1 and R2. Which set of commands must the engineer apply to the two routers so that only traffic between the image server and client A is
+forced to use the
+new circuit?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 321
+Refer to the exhibit. The My_WLAN wireless LAN was configured with WPA2 Layer 2 PSK security .Which additional configuration must the administrator perform
+to allow users to
+connect to this WLAN on a different subnet called Data?
+A. Enable Status and enable Broadcast SSID.
+B. Enable Status and set the NAS-ID to data.
+C. Enable Broadcast SSID and seiect data from the lnterfacettnterface Group drop-down list.
+D. Enable Status and select data from the Interface/Interface Group drop-down list.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 322
+Which lPsec mode encapsulates the entire IP packet?
+A. SSL VPN
+B. transport
+C. Q-in-Q
+D. tunnel
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 323
+Which set of commands are needed to allow only SSH access and hide passwords in the running configuration?
+A. B.
+C.
+
+D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 324
+Refer to the exhibit. Clients on the WLAN are required to use 802.11r. What action must be taken to meet the requirement?
+A. Set the Fast Transition option and the WPA gtk-randomize State to disable.
+B. Under Protected Management Frames, set the PMF option to Required.
+C. Set the Fast Transition option to Enable and enable FT 802.1X under Authentication Key Management.
+D. Enable CCKM under Authentication Key Management.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 325
+What is the benefit of using FHRP?
+A. higher degree of availability
+B. reduced management overhead on network routers
+C. balancing traffic across multiple gateways in proportion to their loads
+D. reduced ARP traffic on the network
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 326
+
+Which configuration parameter is preventing host C from reaching the internet?
+A. automatic DNS
+B. default gateway
+C. lP network mask
+D. IP address assignment
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 327
+Refer to the exhibit. The switch cat9k-acc-1 connects users to the campus LAN. Printing services are inaccessible through the network. Which interface issue is
+causing the
+connectivity problems?
+A. The interface output queue cannot process the Ethernet frames.
+B. Excessive collisions are causing dropped frames.
+C. A large number of broadcast packets are resulting in a port reset.
+D. A bad checksum is causing Ethernet frames to drop.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 328
+Refer to the exhibit. How will the device handle a packet destined to IP address 100.100.100.100?
+A. B.
+C.
+
+D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 329
+Refer to the exhibit. Which type of JSON data is represented?
+A. string
+B. number
+C. object
+D. array
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 330
+Refer to the exhibit. A network engineer is configuring a WLAN to use a WPA2 PSK and allow only specific clients to join. Which twoactions must be taken to
+complete the process?
+(Choose two.)
+A. Enable the CCKM option for Authentication Key Management.
+B. Enable the WPA2 Policy option.
+C. Enable the MAC Filtering option.
+D. Enable the OSEN Policy option.
+E. Enable the 802.1X option for Authentication Key Management.
+Correct Answer: BC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 331
+Which protocol should be used to transfer large files on a company intranet that allows TCP 20 and 21 through the firewall?
+A. SMTP
+B. FTP
+C. TFTP
+D. REST API
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 332
+What is the function of a northbound API?
+A. It provides a path between an SDN controller and network applications.
+B. It upgrades software and restores files.
+
+C. It supports distributed processing for configuration.
+D. It relies on global provisioning and configuration.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 333
+How does CAPWAP communicate between an access point in local mode and a WLC?
+A. The access point must directly connect to the WLC using a copper cable.
+B. The access point has the ability to link to any switch in the network, assuming connectivity to the WLC.
+C. The access point must be connected to the same switch as the WLC.
+D. The access point must not be connected to the wired network, as it would create a loop.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 334
+Refer to the exhibit. How must router A be configured so that it only sends Cisco Discovery Protocol information to router C?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 335
+Which two protocols are supported on service-port interfaces? (Choose two.)
+A. Telnet
+B. TACACS+
+C. SSH
+D. RADIUS
+E. SCP
+Correct Answer: AC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 336
+
+Refer to the exhibit. Routers R1, R2, and R3 use a protocol to ideMifytheir neighbors' IP addresses, hardware platforms, and software versions. A network engineer
+must configure
+R2 to avoid sharing any neighbor information with R3, and maintain its relationship with R1. What action meets this requirement?
+A. Configure the no lldp receive command on g0/1.
+B. Configure the no cdp run command globally.
+C. Configure the no lldp run command globally.
+D. Configure the no cdp enable command on g0/2.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 337
+Which is a fact related to FTP?
+A. It always operates without user authentication.
+B. It uses block numbers to identify and mitigate data-transfer errors.
+C. It uses two separate connections for control and data traffic.
+D. It relies on the well-known UDP port 69.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 338
+Refer to the exhibit. A network engineer configures the CCNA WLAN so that clients must reauthenticate hourly and to limit the number of simultaneous connections
+to the WLAN to
+10. Which two actions complete this configuration? (Choose two.)
+A. Set the Maximum Allowed Clients Per AP Radio value to 10.
+B. Enable the Enable Session Timeout option and set the value to 3600.
+C. Enable the Wi-Fi Direct Clients Policy option.
+D. Enable the Client Exclusion option and set the-value to 3600.
+E. Set the Maximum Allowed Clients value to 10.
+Correct Answer: BE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 339
+What are two differences between optical-fiber cabling and copper cabling? (Choose two.)
+A. The data can pass through the cladding.
+B. Light is transmitted through the core of the fiber.
+C. A BNC connector is used for fiber connections.
+D. Fiber connects to physical interfaces using RJ-45 connections.
+E. The glass core component is encased in a cladding.
+
+Correct Answer: BE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 340
+Refer to the exhibit. Which type of JSON data is shown?
+A. array
+B. Object
+C. Boolean
+D. Key
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 341
+Refer to the exhibit. Which action must be taken so that neighboring devices rapidly discover switch Cat9300?
+A. Configure the cdp timer 10 command on the neighbors of switch Cat9300.
+B. Enable portfast on the ports that connect to neighboring devices.
+C. Configure the cdp timer 10 command on switch Cat9300.
+D. Configure the cdp holdtime 10 command on switch Cat9300.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 342
+What is a characteristic of a SOHO network?
+A. connects each switch to every other switch in the network
+B. provides high throughput access for 1000 or more users
+C. enables multiple users to share a single broadband connection
+D. includes at least three tiers of devices to provide load balancing and redundancy
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 343
+
+Refer to the exhibit. Which next-hop IP address does Router1 use for packets destined to host 10.10.13.158?
+A. 10.10.10.9
+B. 10.10.10.5
+C. 10.10.12.2
+D. 10.10.11.2
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 344
+Which SDN plane forwards user-generated traffic?
+A. control plane
+B. management plane
+C. data plane
+D. policy plane
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 345
+Refer to the exhibit. A newly configured PC fails to connect to the Internet by using TCP port 80 to www.cisco.com. Which setting must be modified for
+the connection to work?
+A. Default Gateway
+B. DHCP Servers
+C. Subnet Mask
+D. DNS Servers
+Correct Answer: D
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 346
+Which WLC interface provides out-of-band management in the Cisco Unified Wireless Network Architecture?
+A. AP-Manager
+B. virtual
+C. service port
+D. Dynamic
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 347
+A network engineer must configure an access list on a new Cisco IOS router. The access list must deny HTTP traffic to network 10.125.128.32/27
+from the 192.168.240.0/20 network, but it must allow the 192.168.240.0/20 network to reach the rest of the 10.0.0.0/8 network Which configuration must the
+engineer apply?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 348
+Which functionality is provided by the console connection on a Cisco WLC?
+A. unencrypted in-band connectivity for file transfers
+B. out-of-band management
+C. secure in-band connectivity for device administration
+D. HTTP-based GUI connectivity
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 349
+Refer to the exhibit. A network engineer updates the existing configuration on interface FastEthernet1/1 switch SW1. It must establish an EtherChannel by using the
+same gro
+designation with another vendor switch. Which configuration must be performed to complete the process?
+A. B.
+C. D.
+
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 350
+Which enhancements were implemented as part of WPA3?
+A. forward secrecy and SAE in personal mode for secure initial key exchange
+B. AES-64 in personal mode and AES-128 in enterprise mode
+C. TKIP encryption improving WEP and per-packet keying
+D. 802.1x authentication and AES-128 encryption
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 351
+Which enhancements were implemented as part of WPA3?
+A. forward secrecy and SAE in personal mode for secure initial key exchange
+B. AES-64 in personal mode and AES-128 in enterprise mode
+C. TKIP encryption improving WEP and per-packet keying
+D. 802.1x authentication and AES-128 encryption
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 352
+Which enhancement is implemented in WPA3?
+A. protects against brute force attacks
+B. applies 802.1x authentication
+C. employs PKI to identify access points
+D. uses TKIP
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 353
+What must be configured to meet the requirements?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 354
+
+Refer to the exhibit. An engineer is configuring an EtherChannel using LACP between Switches 1 and 2. Which configuration must be applied so that
+only Switch 1 sends LACP initiation packets?
+A. Switch1(config-if)#channel-group 1 mode passive
+Switch2(config-if)#channel-group 1 mode active
+B. Switch1(config-if)#channeI-group 1 mode on
+Switch2(config-if)#channel-group 1 mode active
+C. Switch1(config-if)#channeI-group 1 mode on
+Switch2(config-if)#channel-group 1 mode passive
+D. Switch1(config-if)#channel-group1 mode active
+Switch2(config-if)#channel-group 1 mode passive
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 355
+What is an appropriate use for private IPv4 addressing?
+A. on hosts that communicates only with other internal hosts
+B. on the public-facing interface ofa firewall
+C. on internal hosts that stream data solely to external rescurces
+D. to allow hosts inside to communicate in both directions with hosts outside the organization
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 356
+Which authentication method requires the user to provide a physical attribute to authenticate successfully?
+A. multifactor
+B. biometric
+C. password
+D. certificate
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 357
+What is a reason to implement IPv4 private addressing?
+A. Reduce the size of the forwarding table on network routers.
+B. Reduce the risk of a network security breath.
+C. Comply with PCI regulations.
+D. Comply with local law.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 358
+
+Refer to the exhibit. The network engineer is configuring router R2 as a replacement router on the network. After the initial configuration is
+applied, it is determined that R2 failed to show R1 as a neighbor. Which configuration must be applied to R2 to complete the OSPF
+configuration and enable it to establish the neighbor relationship with R1?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 359
+An engineer must configure a core router with a floating static default route to the backup router at 10.200.0.2. Which command meets the requirements?
+A. ip route 0.0.0.0 0.0.0.0 10.200.0.2
+B. ip route 0.0.0.0 0.0.0.0 10.200.0.2
+C. ip route 0.0.0.0.0.0.0.0 10.200.0.2 floating
+D. ip route 0.0.0.0.0.0.0.0 10.200.0.2 10
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 360
+Which function generally performed by a traditional network device is replaced by a software-defined controller?
+A. changing the source or destination address during NAT operations
+B. building route tables and updating the forwarding table
+C. encapsulation and decapsulation of packets in a data-link frame
+D. encryption and decryption for VPN link processing
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 361
+An office has 8 floors withaproxinatey 30-40 users per floor. One subnet must be used. Command must be configured on the router Switched Virual inerface to use
+address
+efficiently?
+
+A.
+B. C.
+D. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 362
+An engineer is configuring NAT to translate the source subnet of 10.10.0.0/24 to any one of three addresses:192.168.3.1, 192.168.3.2, or 192.168.3.3.
+Which configuration should be used?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 363
+While examining excessive traffic on the network, it is noted that all incoming packets on an interface appear to be allowed even though an IPv4 ACL is
+applied to the interface. Which two misconfigurations cause this behavior? (Choose two.)
+A. A matching permit statement is too broadly defined.
+B. A matching permit statement is too high in the access list.
+C. The packets fail to match any permit statement.
+D. The ACL is empty.
+E. A matching deny statement is too high in the access list.
+Correct Answer: AB
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 364
+What is a purpose of traffic shaping?
+A. It provides best-effort service.
+B. It enables dynamic flow identification.
+C. It limits bandwidth usage.
+D. It enables policy-based routing.
+
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 365
+Refer to the exhibit. Which route type is configured to reach the internet?
+A. network route
+B. floating static route
+C. default route
+D. host route
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 366
+Refer to the exhibit. A static route must be configured on R14 to forward traffic for the 172.21.34.0/25 network that resides on R86. Which command
+must be used to fulfill the request? .
+A. ip route 172.21.34.0 255.55.255.128 10.73.65.66
+B. ip route 172.21.34.0 255.255.128.0 10.73.65.64
+C. ip route 172.21.34.0 255.255.255.0 10.73.65.65
+D. ip route 172.21.34.0 255.255.255.192 10.73.65.65
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 367
+
+Refer to the exhibit. All routers in the network are configured. R2 must be the DR. After the engineer connected the devices, R1 was elected as the DR.
+Which command sequence must be configured on R2 to be elected as the DR in the network?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 368
+Which interface is used for out-of-band management on a WLC?
+A. dynamic
+B. service port
+C. Virtual
+D. Management
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 369
+Referto the exhibit. Which command must be issued to enable a floating static default route on router A?
+
+A. ip route 0.0.0.0 0.0.0.0 192.168.1.2
+B. ip default-gateway 192.168.2.1
+C. ip route 0.0.0.0 0.0.0.0 192.168.1.2 10
+D. ip route 0.0.0.0 0.0.0.0 192.168.2.1 10
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 370
+Which cipher is supported for wireless encryption only with the WPA2 standard?
+A. AES256
+B. RC4
+C. SHA
+D. AES
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 371
+Refer to the exhibit. A secondary route is required on router R1 to pass traffic to the LAN network on R2 if the primary link fails. Which command must
+be entered to configure the router?
+A. ip route 10.0.2.0 255.255.255.240 10.0.0.7 92
+B. ip route 10.0.2.0 255.255.255.248 10.0.0.6 91
+C. ip route 10.0.2.0 255.255.255.248 null0 93
+D. ip route 10.0.2.0 255.255.255.240 10.0.0.6 91
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 372
+Refer to the exhibit. This ACL is configured to allow client access only to HTTP, HTTPS, and DNS services via UDP. The new administrator wants to
+add TCP access to the DNS service. Which continuation updates the ACL efficiently?
+A. B.
+
+C.
+D. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 373
+Refer to the exhibit. What two conclusions should be made about this configuration? (Choose two.)
+A. The spanning-tree mode is PVST+
+B. The root port is FastEthernet 2/1.
+C. The spanning-tree mode is Rapid PVST+.
+D. This is a root bridge.
+E. The designated port is FastEthernet 2/1.
+Correct Answer: BC
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 374
+Refer to the exhibit. Which interface is chosen to forward traffic to the host at 192.168.0.55?
+A. GigabitEthernel0/2
+B. Null0
+C. GigabitEthernet0/3
+D. GigabitEthernet0/1
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 375
+Which 802.11 frame type is indicated by a probe response after a client sends a probe request?
+A. Action
+B. Management
+C. Control
+
+D. Data
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 376
+Refer to the exhibit. Which action is taken by the router when a packet is sourced from 10.10.10.2 and destined for 10.10.10.16?
+A. It queues the packets waiting for the route to be learned.
+B. It discards the packets.
+C. It uses a route that is similar to the destination address.
+D. It floods packets to all learned next hops.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 377
+What is the function of a controller in controller-based networking?
+A. It is a pair of core routers that maintain all routing decisions for a campus.
+B. lt centralizes the data plane for the network.
+C. It serves as the centralized management point of an SDN architecture.
+D. It is the card on a core router that maintains all routing decisions for a campus.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 378
+
+Refer to the exhibit. Users on existing VLAN 100 can reach sites on the Internet. Which action must the administrator take to establish connectivity to the Internet
+for users in VLAN
+200?
+A. Configure static NAT translations for VLAN 200.
+B. Define a NAT pool on the router.
+C. Update the NAT_INSIDE_RANGES ACL.
+D. Configure the ip not outside command on another interface for VLAN 200.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 379
+Refer to the exhibit Which IPv6 configuration is required for R17 to successfully ping the WAN interface on R18?
+A.
+
+B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 380
+A client experiences slow throughput from a server that is directly connected to the core switch in a data center. A network engineer finds minimal latency on
+connections to the
+server, but data transfers are unreliable, and the output of the show interfaces counters errors command shows a high FCS-Err count on the interface that is
+connected to the server.
+What is the cause of the throughput issue?
+A. high bandwidth usage
+B. a physical cable fault
+C. a cable that is too long
+D. a speed mismatch
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 381
+Which Rapid PVST+ port state does a port operate in without receiving BPDUs from neighbors or updating the address database?
+
+A. blocking
+B. disabled
+C. listening
+D. forwarding
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 382
+What is a characteristic of RSA?
+A. It requires both sides to have identical keys.
+B. It is a public-key cryptosystem.
+C. It is a private-key encryption algorithm.
+D. It uses preshared keys for encryption.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 383
+Refer to the exhibit. Traffic that is flowing over interface TenGigabitEthernet0/0 experiences slow transfer speeds. What is the reason for the issue?
+A. a duplex incompatibility
+B. queuing drops
+C. a speed conflict
+D. heavy traffic congestion
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 384
+What is a function of a southbound API?
+A. Automate configuration changes between a server and a switching fabric.
+B. Facilitate the information exchange between an SDN controller and application.
+C. Manage flow control between an SDN controller and a switching fabric.
+D. Use orchestration to provision a virtual server configuration from a web server.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 385
+What is the purpose of the URI string in a REST request?
+A. to transport data or payload to a remote resource
+B. to specify the way in which a remote resource is modified
+C. to respond with the data content encoding for a request
+D. to identify a resource on a target server
+Correct Answer: A
+Section: (none)
+
+Explanation
+Explanation/Reference:
+QUESTION 386
+Which IPv6 address block forwards packets to a multicast address rather than a unicast address?
+A. FF00::/12
+B. 2000::/3
+C. FC00::/7
+D. FE80::/10
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 387
+A network administrator wants the syslog server to filter incoming messages into different files based on their importance. Which filtering criteria must be used?
+A. message body
+B. facility
+C. level
+D. process ID
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 388
+Refer to the exhibit. Routers R1 and R3 have the default configuration. The router R2 priority is set to 99. Which commands on R3 configure it
+as the DR in the 10.0.4.0/24 network?
+A. R3(config)# interface Gig0/1
+R3(config-if)# ip ospf priority 0
+B. R3(config)# interface Gig0/0
+R3(conflg-if)# ip ospf priority 1
+C. R3(config)# interface Gig0/0
+R3(config-if)# i p ospf priority 100
+D. R3(config)# interface Gig0/1
+R3(config-if)# ip ospf priority 100
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 389
+
+Refer to the exhibit. Router R14 is in the process of being configured. Which configuration must be used to establish a host route to PC 10?
+A. ip route 10.73.65.65 255.0.0.0 10.80.65.10
+B. ip route 10.73.65.66 0.0.0.255 10.80.65.10
+C. ip route 10.80.65.10 255.255.255.255 10.73.65.66
+D. ip route 10.80.65.10 255.255.255.254 10.80.65.1
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 390
+Which type of traffic is sent with pure IPsec?
+A. broadcast packets from a switch that is attempting to locate a MAC address at one of several remote sites
+B. unicast messages from a host at a remote site lo a server at headquarters.
+C. multicast traffic from a server at one site to hosts at another location
+D. spanning-tree updates between switches that-are at two different sites
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 391
+Aside from discarding, which two states does the switch port transition through while using RSTP (802.1w)? (Choose two.)
+A. speaking
+B. blocking
+C. forwarding
+D. listening
+E. learning
+Correct Answer: CE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 392
+Which key function is provided by the data plane?
+A. exchanging routing table data
+B. originating packets
+C. forwarding traffic to the next hop
+D. making routing decisions
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 393
+
+Refer to the exhibit. The primary route across Gi0/0 is configured on both routers. A secondary route must be configured to establish connectivity
+between the workstation networks. Which command set must be configured to complete this task?
+A. B.
+C. D.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 394
+An administrator must secure the WLC from receiving spoofed association requests. Which steps must be taken to configure the WLC to restrict the requests and
+force the user to
+wait 10 ms to retry an association request?
+A. Enable MAC filtering and set the SA Query timeout to 10.
+B. Enable the Protected Management Frame service and set the Comeback timer to 10.
+C. Enable 802.1X Layer 2 security and set the Comeback timer to 10.
+D. Enable Security Association Teardown Protection and set the SA Query timeout to 10.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 395
+Refer to the exhibit. A network engineer must update the configuration on Switch2 so that it sends LLDP packets every minute and the
+information sent via LLDP is refreshed every 3 minutes. Which configuration must the engineer apply?
+A. Switch2(config)# lldp timer 1
+Switch2(config)# lldp tlv-select 3
+B. Switch2(config)# lldp timer 60
+Switch2(config)# ldp holdtime 180
+C. Switch2(config)# lldp timer 1
+
+Switch2(config)# lldp holdtime 3
+D. Switch2(config)# lldp timer 60
+Switch2(config)# lldp tIv-select 180
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 396
+Refer to the exhibit. Siwitch A is newly configured. All VLANs are present in the VLAN database. The IP phone and PC A on Gi0/1 must be configured for
+the appropriate VLANs to establish connectivity between the PCs Which command set fulfills the requirement? .
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 397
+
+Refer to the exhibit. All VLANs are present in the VLAN database. Which command sequence must be applied to complete the
+configuration?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 398
+A Cisco engineer at a new branch office is configuring a wireless network with access points that connect to a controller that is based at corporate
+headquarters. Wireless client traffic must terminate at the branch office and access-point survivability is required in the event of a WAN outage. Which
+access point mode must be selected?
+A. FlexConhect with local switching enabled
+B. Local with AP fallback enabled
+C. Lightweight with local switching disabled
+D. OfficeExtend with high availability disabled
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 399
+Refer to the exhibit. An engineer is using the Cisco WLC GUI to configure a WLAN for WPA2 encryption with AES and preshared key Cisc0123456. After the
+engineer selects the
+WPA WPA2 option from the Layer 2 Security drop-down list, which two tasks must they perform to complete the process? (Choose two.)
+A. Select the WPA2 Policy and AES check boxes.
+
+B. Select CCKM from the Auth Key Mgmt drop-down list, set the PSK Format to Hex, and enter the key.
+C. Select ASCII from the PSK Format drop-down list, enter the key, and leave the Auth Key Mgmt setting blank.
+D. Select the WPA2 Policy, AES, and TKIP check boxes.
+E. Select PSK from the Auth Key Mgmt drop-down list, set the PSK Format to ASCII, and enter the key.
+Correct Answer: AE
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 400
+Which two statements distinguish authentication from accounting? (Choose two.)
+A. Only authentication provides supporting information for billing users.
+B. Only authentication records the duration ofa user's connection.
+C. Only authentication validates "who you are."
+D. Only authentication challenges users for their credentials and returns a response.
+E. Only authentication supports user-activity audits.
+Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 401
+Refer to the exhibit. IPv6 is being implemented within the enterprise. The command ipv6 unicast-routing is configured. Interface Gig0/0 on R1 must be configured to
+provide a
+dynamic assignment using the assigned IPv6 block. Which command accomplishes this task?
+A. B.
+C. D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 402
+
+Refer to the exhibit. An engineer is configuring the HO router. Which IPv6 address configuration must be applied to the router fa0l1 interface for the router to assign
+a unique 64-bit
+IPv6 address to itself?
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 403
+A network administrator must enable DHCP services between two sites. What must be configured for the router to pass DHCPDISCOVER messages on to the
+server?
+A. DHCP Snooping
+B. a DHCP Pool
+C. DHCP Binding
+D. a DHCP Relay Agent
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 404
+Which condition must be met before an NMS handles an SNMP trap from an agent?
+A. The NMS software must be loaded with the MIB associated with the trap.
+B. The NMS must receive the same trap from two different SNMP agents to verify that it is reliable.
+C. The NMS must receive a trap and an inform message from the SNMP agent within a configured interval.
+D. The NMS must be configured on the same router as the SNMP agent.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 405
+What is a benefit of using private IPv4 addressing?
+A. Communication to the internet is reachable without the use of NAT.
+B. Direct connectivity is provided to internal hosts from outside an enterprise network.
+C. All external hosts are provided with secure communication to the internet.
+D. Multiple companies can use the same addresses without conflicts.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 406
+Refer to the exhibit. A network engineer is in the process of establishing lP connectivity between two sites. Routers R1 and R2 are partially configured
+with IP addressing. Both routers have the ability to access devices on their respective LANs. Which command set configures the IP connectivity
+between devices located on both LANs in each site?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 407
+Which alternative to password authentication is implemented to allow enterprise devices to log in to the corporate network?
+A. digital certificates
+B. magic links
+C. 90-day renewal policie
+D. sone-time passwords
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 408
+
+Refer to the exhibit. What is the cause of poor performance on router R19?
+A. excessive collisions
+B. port oversubscription
+C. speed and duplex mismatch
+D. excessive CRC errors
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 409
+Refer to the exhibit. An engineer has started to configure replacement switch SW1. To verify part of the configuration, the engineer
+issued the commands as shown and noticed that the entry for PC2 is missing. Which change must be applied to SW1 so that PC1
+and PC2 communicate normally? .
+A. B.
+C. D.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 410
+How do UTP and STP cables compare?
+
+A. UTP cables provide faster and more reliable data transfer rates and STP cables are slower and less reliable.
+B. STP cables are shielded and protect against electromagnetic interference and UTP tacks thesame prbtection against electromagnetic interference.
+C. STP cables are cheaper to procure and easier to install and UTP cables are more expensive and harder to install.
+D. UTP cables are less prone to crosstalk and interference and STP cables are more prone to crosstalk and interference.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 411
+Refer to the exhibit. An engineer is updating the management access configuration of switch SW1 to allow secured, encrypted remote configuration. Which two
+commands or
+command sequences must the engineer apply to the switch? (Choose two.)
+A. B.
+C. D.
+E. Correct Answer: CD
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 412
+
+Refer to the exhibit. Which switch in this configuration will be elected as the root bridge?
+A. SW1
+B. SW2
+C. SW4
+D. SW3
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 413
+What is an advantage of Cisco DNA Center versus traditional campus device management?
+A. It is designed primarily to provide network assurance.
+B. It enables easy autodiscovery of network elements in a brownfield deployment.
+C. It supports numerous extensibility options, including cross-domain adapters and third-party SDKs.
+D. It supports high availability for management functions when operating in cluster mode.
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 414
+What is an enhancement implemented in WPA3?
+A. applies 802.1X authentication and AES-128 encryption
+B. uses TKIP and per-packet keying
+C. defends against deauthentication and disassociation attacks
+D. employs PKl and RADIUS to identify access points
+Correct Answer: C
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 415
+Refer to the exhibit. Network sentices must be enabled on interface Gi1/0/34. Which configuration meets the needs for this implementation?
+A. B.
+C. D.
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 416
+Which cable type must be used when connecting two like devices together using these criteria?
+
+1. Pins 1 to 3 and 2 to 6 are required
+2. Auto detection MDI-X is unavailable
+A. crossover
+B. straight-through
+C. rollover
+D. console
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 417
+Refer to the exhibit. All interfaces are configured with duplex auto and ip ospf network broadcast. Which configuration allows routers R14 and R86 to form an
+OSPFv2 adjacency while acting as a central point for exchanging
+OSPF information between routers?
+A.
+
+B.
+C.
+
+D.
+Correct Answer: B
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 418
+Which action is taken by the data plane within a network device?
+A. constructs a routing table based on a routing protocol
+B. provides CLl access to the network device
+C. looks up an egress interface in the forwarding information base
+D. forwards traffic to the next hop
+Correct Answer: D
+Section: (none)
+Explanation
+Explanation/Reference:
+
+Exam B
+QUESTION 1
+Drag and drop the statements about AAA services from the left to the corresponding AAA services on the right. Not all options are used.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 2
+Drag and drop the Cisco Wireless LAN Controller security settings from the left onto the correct security mechanism categories on the right.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 3
+Refer to the exhibit. Drag and drop the learned prefixes from the left onto the subnet masks on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 4
+Refer to the exhibit. Drag and drop the subnet masks from the left onto the corresponding subnets on the right. Not all subnet masks are used.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 5
+Drag and drop the statements about networking from the left onto the corresponding networking types on the right.
+Select and Place:
+
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 6
+
+Refer to the exhibit. An engineer is tasked with verifying network configuration parameters on a client workstation to report back to the team
+lead. Drag and drop the node identifiers from the left onto the network parameters on the right. Not all values are used.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 7
+Drag and drop the management connection types from the left onto the definitions on the right
+Select and Place:
+
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 8
+Drag and drop the statements about networking from the left onto the corresponding networking types on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+
+Explanation/Reference:
+QUESTION 9
+Drag and drop the AAA terms from the left onto the descriptions on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 10
+Drag and drop the TCP or UDP details from the left onto their corresponding protocols on the right.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 11
+Drag and drop the descriptions of AAA services from the left onto the corresponding services on the right
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 12
+Drag and drop the characteristics of network architectures from the left onto the type of architecture on the right.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 13
+Drag and drop the DHCP snooping terms from the left onto the descriptions on the right
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 14
+Drag and drop the characteristics of northbound APls from the left onto any position on the right. Not all characteristics are used.
+Select and Place:
+
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 15
+Drag and drop the device behaviors from the left onto the matching HSRP state on the right.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 16
+Drag the descriptions of device management from the left onto the types of device management on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 17
+Drag and drop the IPv6 address type characteristics from the left to the right.
+
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 18
+An engineer is configuring an encrypted password for the enable command on a router where the local user database has already been configured. Drag and drop
+the configuration
+commands from the left into the correct sequence on the right. Not all commands are used.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 19
+Refer to the exhibit. Drag and drop the learned prefixes from the left onto the preferred route methods from which they were learned on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 20
+
+Drag and drop the statements about networking from the left onto the corresponding networking types on the right. Not alltstatements are used.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 21
+Drag and drop the Ansible features from the left to the right. Not all features are used.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 22
+Drag and drop the characteristics of transport layer protocols from the left onto the corresponding protocols on the right.
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 23
+Drag and drop the IPv6 addresses from the left onto the corresponding address types on the right
+Select and Place:
+Correct Answer:
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 24
+Drag and drop the attack-mitigation techniques from the left onto the types of attack that they mitigate on the right.
+Select and Place:
+Correct Answer:
+Section: (none)
+Explanation
+Explanation/Reference:
+
+Exam C
+QUESTION 1
+A. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+
+QUESTION 2
+A.
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 3
+A. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 4
+
+A.
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 5
+A.
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 6
+A. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 7
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 8
+
+A.
+
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 9
+A. Correct Answer: A
+
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 10
+A. Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 11
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 12
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 13
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 14
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 15
+
+A.
+Correct Answer: A
+Section: (none)
+Explanation
+Explanation/Reference:
+QUESTION 16
+A. Correct Answer: A
+Section: (none)
+Explanation
+
+Explanation/Reference:

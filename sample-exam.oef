@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "title": "Sample Networking Exam",
+    "vendor": "VirtualExamp Demo",
+    "exam_code": "NET-101",
+    "pass_percentage": 70,
+    "time_limit_minutes": 30,
+    "description": "A sample exam demonstrating the Open Exam Format (OEF) structure."
+  },
+  "domains": [
+    { "id": "network-basics", "name": "Network Basics", "weight": 30 },
+    { "id": "protocols", "name": "Protocols & Ports", "weight": 25 },
+    { "id": "security", "name": "Network Security", "weight": 25 },
+    { "id": "troubleshooting", "name": "Troubleshooting", "weight": 20 }
+  ],
+  "questions": [
+    {
+      "id": "q001",
+      "type": "multiple_choice",
+      "domain_id": "network-basics",
+      "text": "What is the primary purpose of a default gateway in a network?",
+      "options": [
+        { "id": "a", "text": "To provide DNS resolution for domain names" },
+        { "id": "b", "text": "To route traffic between different networks" },
+        { "id": "c", "text": "To assign IP addresses to network devices" },
+        { "id": "d", "text": "To encrypt data transmitted over the network" }
+      ],
+      "correct_answers": ["b"],
+      "explanation": "The default gateway is a router that connects a local network to other networks or the internet. When a device needs to communicate with a host outside its local network, it sends the traffic to the default gateway for routing."
+    },
+    {
+      "id": "q002",
+      "type": "multiple_choice",
+      "domain_id": "network-basics",
+      "text": "Which OSI layer is responsible for logical addressing and routing?",
+      "options": [
+        { "id": "a", "text": "Data Link Layer (Layer 2)" },
+        { "id": "b", "text": "Network Layer (Layer 3)" },
+        { "id": "c", "text": "Transport Layer (Layer 4)" },
+        { "id": "d", "text": "Session Layer (Layer 5)" }
+      ],
+      "correct_answers": ["b"],
+      "explanation": "The Network Layer (Layer 3) is responsible for logical addressing (IP addresses) and routing of packets between networks. Routers operate at this layer."
+    },
+    {
+      "id": "q003",
+      "type": "multiple_choice",
+      "domain_id": "protocols",
+      "text": "Which port does HTTPS use by default?",
+      "options": [
+        { "id": "a", "text": "Port 80" },
+        { "id": "b", "text": "Port 443" },
+        { "id": "c", "text": "Port 21" },
+        { "id": "d", "text": "Port 25" }
+      ],
+      "correct_answers": ["b"],
+      "explanation": "HTTPS (HTTP Secure) uses port 443 by default. Port 80 is used by HTTP, port 21 by FTP, and port 25 by SMTP."
+    },
+    {
+      "id": "q004",
+      "type": "multiple_choice",
+      "domain_id": "protocols",
+      "text": "Which protocol is used to automatically assign IP addresses to devices on a network?",
+      "options": [
+        { "id": "a", "text": "DNS" },
+        { "id": "b", "text": "DHCP" },
+        { "id": "c", "text": "ARP" },
+        { "id": "d", "text": "ICMP" }
+      ],
+      "correct_answers": ["b"],
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses and other network configuration parameters to devices on a network."
+    },
+    {
+      "id": "q005",
+      "type": "multiple_choice",
+      "domain_id": "security",
+      "text": "What type of attack involves an attacker intercepting and altering communications between two parties?",
+      "options": [
+        { "id": "a", "text": "Denial of Service (DoS)" },
+        { "id": "b", "text": "Phishing" },
+        { "id": "c", "text": "Man-in-the-Middle (MITM)" },
+        { "id": "d", "text": "SQL Injection" }
+      ],
+      "correct_answers": ["c"],
+      "explanation": "A Man-in-the-Middle (MITM) attack occurs when an attacker secretly intercepts and possibly alters communications between two parties who believe they are communicating directly with each other."
+    },
+    {
+      "id": "q006",
+      "type": "multiple_choice",
+      "domain_id": "security",
+      "text": "Which security protocol provides encryption for wireless networks and is recommended over WEP?",
+      "options": [
+        { "id": "a", "text": "WPA2" },
+        { "id": "b", "text": "SSH" },
+        { "id": "c", "text": "SSL" },
+        { "id": "d", "text": "IPSec" }
+      ],
+      "correct_answers": ["a"],
+      "explanation": "WPA2 (Wi-Fi Protected Access 2) provides strong encryption for wireless networks and is recommended over the older, less secure WEP (Wired Equivalent Privacy) protocol."
+    },
+    {
+      "id": "q007",
+      "type": "multiple_choice",
+      "domain_id": "troubleshooting",
+      "text": "Which command is used to test connectivity to a remote host by sending ICMP echo requests?",
+      "options": [
+        { "id": "a", "text": "traceroute" },
+        { "id": "b", "text": "nslookup" },
+        { "id": "c", "text": "ping" },
+        { "id": "d", "text": "netstat" }
+      ],
+      "correct_answers": ["c"],
+      "explanation": "The ping command sends ICMP echo request packets to a target host and waits for echo reply packets to test network connectivity and measure latency."
+    },
+    {
+      "id": "q008",
+      "type": "multiple_choice",
+      "domain_id": "troubleshooting",
+      "text": "What does the TTL (Time To Live) field in an IP packet indicate?",
+      "options": [
+        { "id": "a", "text": "The encryption strength of the packet" },
+        { "id": "b", "text": "The maximum number of hops before the packet is discarded" },
+        { "id": "c", "text": "The total time the packet has been in transit" },
+        { "id": "d", "text": "The priority level of the packet" }
+      ],
+      "correct_answers": ["b"],
+      "explanation": "TTL (Time To Live) specifies the maximum number of router hops a packet can traverse before being discarded. Each router decrements the TTL by 1, and when it reaches 0, the packet is dropped."
+    },
+    {
+      "id": "q009",
+      "type": "multiple_choice",
+      "domain_id": "network-basics",
+      "text": "What is the valid range for host addresses in a Class C network with default subnet mask?",
+      "options": [
+        { "id": "a", "text": "1 to 255" },
+        { "id": "b", "text": "0 to 254" },
+        { "id": "c", "text": "1 to 254" },
+        { "id": "d", "text": "0 to 255" }
+      ],
+      "correct_answers": ["c"],
+      "explanation": "In a Class C network with default subnet mask (255.255.255.0), host addresses range from 1 to 254. Address 0 represents the network address, and 255 is the broadcast address."
+    },
+    {
+      "id": "q010",
+      "type": "multiple_choice",
+      "domain_id": "protocols",
+      "text": "Which protocol operates at the Transport Layer and provides reliable, ordered delivery of data?",
+      "options": [
+        { "id": "a", "text": "UDP" },
+        { "id": "b", "text": "IP" },
+        { "id": "c", "text": "TCP" },
+        { "id": "d", "text": "ICMP" }
+      ],
+      "correct_answers": ["c"],
+      "explanation": "TCP (Transmission Control Protocol) operates at the Transport Layer (Layer 4) and provides reliable, ordered, and error-checked delivery of data between applications."
+    }
+  ]
+}
