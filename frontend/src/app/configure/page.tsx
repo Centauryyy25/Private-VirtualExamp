@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { useExamStore } from '@/lib/store/examStore';
 import { useAuth } from '@/lib/auth-context';
+import { api } from '@/lib/api';
 
 export default function ConfigureExamPage() {
     const router = useRouter();
@@ -49,19 +50,40 @@ export default function ConfigureExamPage() {
 
 
 
-    const handleStartExam = () => {
-        if (!exam) return;
+    const [isStarting, setIsStarting] = useState(false);
+
+    const handleStartExam = async () => {
+        if (!exam || isStarting) return;
+        setIsStarting(true);
+
+        const examMode = mode === 'exam' ? 'timed' : 'training';
+        const timeLimit = timeLimitEnabled ? customTime : undefined;
+        let sessionIdentifier = exam.id;
+
+        // For authenticated users, create a real backend session
+        if (isAuthenticated) {
+            try {
+                const result = await api.startSession(exam.id, examMode, timeLimit);
+                if (result.data?.id) {
+                    sessionIdentifier = result.data.id;
+                }
+            } catch (error) {
+                console.error('Failed to create backend session:', error);
+                // Fall back to local-only session
+            }
+        }
 
         startSession(
-            exam.id,
-            mode === 'exam' ? 'timed' : 'training',
-            timeLimitEnabled ? customTime : undefined,
+            sessionIdentifier,
+            examMode,
+            timeLimit,
             randomizationEnabled,
             questionCount
         );
 
-        sessionStorage.setItem('examMode', mode === 'exam' ? 'timed' : 'training');
+        sessionStorage.setItem('examMode', examMode);
         sessionStorage.removeItem('resultsSaved');
+        setIsStarting(false);
         router.push('/exam');
     };
 

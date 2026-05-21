@@ -3,6 +3,10 @@ Score calculation and analytics service.
 """
 from datetime import datetime
 from typing import Any
+from uuid import UUID
+
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 
 def calculate_session_result(
@@ -105,6 +109,58 @@ def calculate_session_result(
         "domain_scores_list": domain_scores_list,
         "time_per_question": time_per_question,
     }
+
+
+async def update_question_analytics(
+    db: AsyncSession,
+    exam_id: UUID,
+    exam_data: dict[str, Any],
+    user_answers: list[dict[str, Any]],
+) -> None:
+    """Upsert QuestionAnalytics rows based on a submitted session."""
+    from app.models.models import QuestionAnalytics
+
+    questions = exam_data.get("questions", [])
+    answer_map = {a["question_id"]: a for a in user_answers}
+
+    for idx, q in enumerate(questions):
+        q_id = q["id"]
+        correct_answer = set(q.get("correct_answers", []))
+        user_answer_data = answer_map.get(q_id)
+
+        is_correct = False
+        time_spent = 0
+        if user_answer_data:
+            user_selection = set(user_answer_data.get("answer", []))
+            is_correct = user_selection == correct_answer
+            time_spent = user_answer_data.get("time_spent_seconds", 0)
+
+        # Look up existing analytics row
+        result = await db.execute(
+            select(QuestionAnalytics).where(
+                QuestionAnalytics.exam_id == exam_id,
+                QuestionAnalytics.question_index == idx,
+            )
+        )
+        analytics = result.scalar_one_or_none()
+
+        if analytics:
+            old_total = analytics.times_answered
+            analytics.times_answered += 1
+            analytics.times_correct += 1 if is_correct else 0
+            analytics.avg_time_seconds = (
+                ((analytics.avg_time_seconds or 0) * old_total + time_spent)
+                / analytics.times_answered
+            )
+        else:
+            analytics = QuestionAnalytics(
+                exam_id=exam_id,
+                question_index=idx,
+                times_answered=1,
+                times_correct=1 if is_correct else 0,
+                avg_time_seconds=time_spent,
+            )
+            db.add(analytics)
 
 
 def calculate_difficulty(times_answered: int, times_correct: int) -> float:

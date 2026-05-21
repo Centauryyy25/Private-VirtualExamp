@@ -162,7 +162,7 @@ class ApiClient {
 
   // Session endpoints
   async startSession(examId: string, mode: 'timed' | 'training' | 'review', timeLimitMinutes?: number) {
-    return this.request('/api/sessions/start', {
+    return this.request<{ id: string; exam_id: string; mode: string }>('/api/sessions/start', {
       method: 'POST',
       body: JSON.stringify({
         exam_id: examId,
@@ -202,8 +202,39 @@ class ApiClient {
 
   async listSessions(examId?: string) {
     const query = examId ? `?exam_id=${examId}` : '';
-    return this.request(`/api/sessions/${query}`);
+    return this.request<SessionListItem[]>(`/api/sessions/${query}`);
   }
+
+  async getAnalyticsSummary() {
+    return this.request<AnalyticsSummary>('/api/sessions/analytics/summary');
+  }
+}
+
+export interface SessionListItem {
+  id: string;
+  exam_id: string;
+  exam_title: string;
+  mode: string;
+  start_time: string;
+  end_time: string | null;
+  score: number | null;
+  passed: boolean | null;
+  total_questions: number | null;
+  correct_answers: number | null;
+  domain_scores: Record<string, number> | null;
+  time_taken_seconds: number | null;
+}
+
+export interface AnalyticsSummary {
+  total_exams: number;
+  pass_rate: number;
+  average_score: number;
+  total_time_hours: number;
+  weak_domains: Array<{
+    domain_id: string;
+    domain_name: string;
+    avg_score: number;
+  }>;
 }
 
 export const api = new ApiClient(API_BASE_URL);

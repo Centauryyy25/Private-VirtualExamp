@@ -170,10 +170,46 @@ class SessionResult(BaseModel):
     end_time: datetime
 
 
+class SessionListResponse(BaseModel):
+    """Enriched schema for listing sessions with exam info."""
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    exam_id: UUID
+    exam_title: str
+    mode: str
+    start_time: datetime
+    end_time: Optional[datetime]
+    score: Optional[float]
+    passed: Optional[bool]
+    total_questions: Optional[int]
+    correct_answers: Optional[int]
+    domain_scores: Optional[dict]
+    time_taken_seconds: Optional[int]
+
+
+class SessionDetailResponse(BaseModel):
+    """Schema for detailed session response (includes user answers for review)."""
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    exam_id: UUID
+    mode: str
+    start_time: datetime
+    end_time: Optional[datetime]
+    score: Optional[float]
+    passed: Optional[bool]
+    total_questions: Optional[int]
+    correct_answers: Optional[int]
+    user_answers: Optional[list]
+    domain_scores: Optional[dict]
+    time_per_question: Optional[list]
+
+
 class SessionResponse(BaseModel):
     """Schema for session response."""
     model_config = ConfigDict(from_attributes=True)
-    
+
     id: UUID
     exam_id: UUID
     mode: str

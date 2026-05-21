@@ -4,27 +4,20 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/lib/auth-context';
-import { useHistoryStore, ExamHistoryEntry } from '@/lib/store/historyStore';
+import { useSessionHistory } from '@/lib/hooks/useSessionHistory';
 import PerformanceChart from '@/components/charts/PerformanceChart';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function DashboardPage() {
     const router = useRouter();
     const { user, isAuthenticated, isLoading, logout } = useAuth();
-    const { history, getStats } = useHistoryStore();
-    const [stats, setStats] = useState({ total: 0, passed: 0, avgScore: 0 });
+    const { history, stats, isLoading: historyLoading } = useSessionHistory();
     const [mounted, setMounted] = useState(false);
     const [timeRange, setTimeRange] = useState<30 | 90 | 365>(30);
 
     useEffect(() => {
         setMounted(true);
     }, []);
-
-    useEffect(() => {
-        if (mounted) {
-            setStats(getStats());
-        }
-    }, [mounted, history, getStats]);
 
     const handleLogout = () => {
         logout();
@@ -41,7 +34,7 @@ export default function DashboardPage() {
         });
     };
 
-    if (isLoading || !mounted) {
+    if (isLoading || historyLoading || !mounted) {
         return (
             <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <p className="text-muted">Loading...</p>
@@ -250,7 +243,7 @@ export default function DashboardPage() {
                                 STUDY TIME
                             </div>
                             <div style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--foreground)' }}>
-                                142h
+                                {stats.totalTimeHours > 0 ? `${Math.round(stats.totalTimeHours)}h` : '0h'}
                             </div>
                         </div>
                     </div>
@@ -409,7 +402,7 @@ export default function DashboardPage() {
                                                     </span>
                                                 </td>
                                                 <td style={{ padding: 'var(--space-4) var(--space-3)' }}>
-                                                    <Link href="/results" style={{
+                                                    <Link href={isAuthenticated ? `/results?session=${entry.id}` : '/results'} style={{
                                                         color: 'var(--primary-600)',
                                                         fontSize: '0.875rem',
                                                         fontWeight: 500,

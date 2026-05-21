@@ -74,6 +74,8 @@ class ExamSession(Base):
     user_answers: Mapped[dict] = mapped_column(JSONB, nullable=False, default=list)
     domain_scores: Mapped[Optional[dict]] = mapped_column(JSONB)  # {"routing": 85, "switching": 60}
     time_per_question: Mapped[Optional[dict]] = mapped_column(JSONB)  # [45, 30, 120, ...]
+    total_questions: Mapped[Optional[int]] = mapped_column(Integer)
+    correct_answers: Mapped[Optional[int]] = mapped_column(Integer)
     flagged_questions: Mapped[Optional[list]] = mapped_column(ARRAY(Integer), default=list)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     

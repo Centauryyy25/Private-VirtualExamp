@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useExamStore } from '@/lib/store/examStore';
 import { useHistoryStore, ExamHistoryEntry } from '@/lib/store/historyStore';
 import { useAuth } from '@/lib/auth-context';
+import { api } from '@/lib/api';
 import ScoreGauge from '@/components/charts/ScoreGauge';
 import { DomainBarChart } from '@/components/charts/DomainCharts';
 import ThemeToggle from '@/components/ThemeToggle';
@@ -26,11 +27,12 @@ interface ExamInfo {
 
 export default function ResultsPage() {
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { clearSession } = useExamStore();
     const { addEntry } = useHistoryStore();
     const { isAuthenticated } = useAuth();
     const [examInfo, setExamInfo] = useState<ExamInfo | null>(null);
-    const [saved, setSaved] = useState(() => sessionStorage.getItem('resultsSaved') === 'true');
+    const [saved, setSaved] = useState(false);
     const [results, setResults] = useState<{
         score: number;
         passed: boolean;
@@ -41,8 +43,106 @@ export default function ResultsPage() {
         userAnswers: Record<string, string[]>;
     } | null>(null);
 
-
+    // Check if resultsSaved flag exists in sessionStorage (client-side only)
     useEffect(() => {
+        setSaved(sessionStorage.getItem('resultsSaved') === 'true');
+    }, []);
+
+    // Load results from backend session or sessionStorage
+    useEffect(() => {
+        const sessionId = searchParams.get('session');
+
+        if (sessionId && isAuthenticated) {
+            // Load from backend
+            loadFromBackend(sessionId);
+        } else {
+            // Load from sessionStorage (existing flow)
+            loadFromSessionStorage();
+        }
+    }, [searchParams, isAuthenticated]);
+
+    const loadFromBackend = async (sessionId: string) => {
+        try {
+            const sessionResult = await api.getSession(sessionId);
+            if (sessionResult.error || !sessionResult.data) {
+                router.push('/dashboard');
+                return;
+            }
+
+            const session = sessionResult.data as any;
+            const examResult = await api.getExam(session.exam_id);
+            if (examResult.error || !examResult.data) {
+                router.push('/dashboard');
+                return;
+            }
+
+            const examData = (examResult.data as any).parsed_data;
+            const info: ExamInfo = {
+                title: examData.metadata?.title || (examResult.data as any).title || 'Exam',
+                pass_percentage: examData.metadata?.pass_percentage || 70,
+                total_questions: examData.questions?.length || 0,
+            };
+            setExamInfo(info);
+
+            // Rebuild answer map from session's user_answers
+            const answerMap: Record<string, string[]> = {};
+            const userAnswers = session.user_answers || [];
+            userAnswers.forEach((a: { question_id: string; answer: string[] }) => {
+                answerMap[a.question_id] = a.answer;
+            });
+
+            // Calculate domain scores from exam data
+            const domainStats: Record<string, { name: string; total: number; correct: number }> = {};
+            examData.domains?.forEach((d: { id: string; name: string }) => {
+                domainStats[d.id] = { name: d.name, total: 0, correct: 0 };
+            });
+            domainStats['_general'] = { name: 'General', total: 0, correct: 0 };
+
+            let totalCorrect = 0;
+            const totalQuestions = examData.questions.length;
+
+            examData.questions.forEach((q: { id: string; domain_id?: string; correct_answers: string[] }) => {
+                const domainId = q.domain_id || '_general';
+                if (!domainStats[domainId]) {
+                    domainStats[domainId] = { name: domainId, total: 0, correct: 0 };
+                }
+                domainStats[domainId].total++;
+                const userAnswer = answerMap[q.id] || [];
+                const isCorrect = userAnswer.length === q.correct_answers.length &&
+                    userAnswer.every(a => q.correct_answers.includes(a));
+                if (isCorrect) {
+                    totalCorrect++;
+                    domainStats[domainId].correct++;
+                }
+            });
+
+            const score = totalQuestions > 0 ? (totalCorrect / totalQuestions) * 100 : 0;
+            const domainScores: DomainScore[] = Object.entries(domainStats)
+                .filter(([_, stats]) => stats.total > 0)
+                .map(([id, stats]) => ({
+                    domain_id: id,
+                    domain_name: stats.name,
+                    score: (stats.correct / stats.total) * 100,
+                    total_questions: stats.total,
+                    correct_answers: stats.correct,
+                }));
+
+            setResults({
+                score,
+                passed: score >= info.pass_percentage,
+                correct: totalCorrect,
+                total: totalQuestions,
+                domainScores,
+                questions: examData.questions,
+                userAnswers: answerMap,
+            });
+        } catch (error) {
+            console.error('Failed to load session from backend:', error);
+            router.push('/dashboard');
+        }
+    };
+
+    const loadFromSessionStorage = () => {
         const answersJson = sessionStorage.getItem('examAnswers');
         const examDataJson = sessionStorage.getItem('examData');
         const examInfoJson = sessionStorage.getItem('examInfo');
@@ -127,7 +227,7 @@ export default function ResultsPage() {
                 correctAnswers: calculatedResults.correct,
             });
         }
-    }, [router, saved, addEntry]);
+    };
 
     const handleDashboard = () => {
         clearSession();
