@@ -66,10 +66,11 @@ export default function ConfigureExamPage() {
                 const result = await api.startSession(exam.id, examMode, timeLimit);
                 if (result.data?.id) {
                     sessionIdentifier = result.data.id;
+                } else if (result.error) {
+                    console.error('Backend session creation failed:', result.error);
                 }
             } catch (error) {
                 console.error('Failed to create backend session:', error);
-                // Fall back to local-only session
             }
         }
 

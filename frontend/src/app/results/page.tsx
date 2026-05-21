@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useExamStore } from '@/lib/store/examStore';
@@ -25,14 +25,26 @@ interface ExamInfo {
     total_questions: number;
 }
 
-export default function ResultsPage() {
+export default function ResultsPageWrapper() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950">
+                <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        }>
+            <ResultsPage />
+        </Suspense>
+    );
+}
+
+function ResultsPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { clearSession } = useExamStore();
     const { addEntry } = useHistoryStore();
     const { isAuthenticated } = useAuth();
     const [examInfo, setExamInfo] = useState<ExamInfo | null>(null);
-    const [saved, setSaved] = useState(false);
+    const savedRef = useRef(false);
     const [results, setResults] = useState<{
         score: number;
         passed: boolean;
@@ -43,20 +55,18 @@ export default function ResultsPage() {
         userAnswers: Record<string, string[]>;
     } | null>(null);
 
-    // Check if resultsSaved flag exists in sessionStorage (client-side only)
-    useEffect(() => {
-        setSaved(sessionStorage.getItem('resultsSaved') === 'true');
-    }, []);
-
     // Load results from backend session or sessionStorage
     useEffect(() => {
+        // Synchronous guard: survives React Strict Mode re-runs
+        if (!savedRef.current) {
+            savedRef.current = sessionStorage.getItem('resultsSaved') === 'true';
+        }
+
         const sessionId = searchParams.get('session');
 
         if (sessionId && isAuthenticated) {
-            // Load from backend
             loadFromBackend(sessionId);
         } else {
-            // Load from sessionStorage (existing flow)
             loadFromSessionStorage();
         }
     }, [searchParams, isAuthenticated]);
@@ -214,9 +224,11 @@ export default function ResultsPage() {
 
         setResults(calculatedResults);
 
-        if (!saved) {
+        // Only add to local history for guest users (authenticated users have server history)
+        // Use ref as synchronous guard to prevent double-add from React Strict Mode
+        if (!savedRef.current && !isAuthenticated) {
+            savedRef.current = true;
             sessionStorage.setItem('resultsSaved', 'true');
-            setSaved(true);
             const modeStr = sessionStorage.getItem('examMode') || 'training';
             addEntry({
                 examTitle: info.title,
@@ -226,6 +238,10 @@ export default function ResultsPage() {
                 totalQuestions: calculatedResults.total,
                 correctAnswers: calculatedResults.correct,
             });
+        } else if (!savedRef.current) {
+            // Authenticated: just mark as saved, no local entry needed
+            savedRef.current = true;
+            sessionStorage.setItem('resultsSaved', 'true');
         }
     };
 

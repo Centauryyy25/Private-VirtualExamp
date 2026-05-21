@@ -94,6 +94,8 @@ export function useSessionHistory() {
         }
     }, [isAuthenticated]);
 
+    const localStats = localStore.getStats();
+
     if (isAuthenticated) {
         return {
             history: serverHistory,
@@ -104,7 +106,6 @@ export function useSessionHistory() {
     }
 
     // Guest: use local store
-    const localStats = localStore.getStats();
     return {
         history: localStore.history,
         stats: {

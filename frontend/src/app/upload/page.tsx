@@ -80,35 +80,24 @@ export default function UploadPage() {
                 return;
             }
 
-            const content = await file.text();
-            const data = JSON.parse(content);
+            // Upload JSON/OEF to backend for persistence
+            const response = await api.uploadExam(file, false);
 
-            // Validate basic structure
-            if (!data.metadata || !data.questions) {
-                throw new Error('Invalid exam format. Missing metadata or questions.');
+            if (response.error) {
+                throw new Error(response.error);
             }
 
-            if (!Array.isArray(data.questions) || data.questions.length === 0) {
-                throw new Error('Exam must contain at least one question.');
-            }
+            const examData = response.data as any;
 
-            // Create exam object
             const exam: Exam = {
-                id: crypto.randomUUID(),
-                title: data.metadata.title || 'Untitled Exam',
-                description: data.metadata.description,
-                total_questions: data.questions.length,
-                pass_percentage: data.metadata.pass_percentage || 70,
-                time_limit_minutes: data.metadata.time_limit_minutes,
-                domains: data.domains?.reduce((acc: Record<string, number>, d: { id: string; weight: number }) => {
-                    acc[d.id] = d.weight;
-                    return acc;
-                }, {}),
-                parsed_data: {
-                    metadata: data.metadata,
-                    domains: data.domains || [],
-                    questions: data.questions,
-                },
+                id: examData.id,
+                title: examData.title,
+                description: examData.description,
+                total_questions: examData.total_questions,
+                pass_percentage: examData.pass_percentage,
+                time_limit_minutes: examData.time_limit_minutes,
+                domains: examData.domains,
+                parsed_data: examData.parsed_data,
             };
 
             setUploadedExam(exam);
