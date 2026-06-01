@@ -87,19 +87,26 @@ function ResultsPage() {
             }
 
             const examData = (examResult.data as any).parsed_data;
-            const info: ExamInfo = {
-                title: examData.metadata?.title || (examResult.data as any).title || 'Exam',
-                pass_percentage: examData.metadata?.pass_percentage || 70,
-                total_questions: examData.questions?.length || 0,
-            };
-            setExamInfo(info);
 
-            // Rebuild answer map from session's user_answers
+            // Rebuild answer map from session's user_answers (needed before filtering)
             const answerMap: Record<string, string[]> = {};
             const userAnswers = session.user_answers || [];
             userAnswers.forEach((a: { question_id: string; answer: string[] }) => {
                 answerMap[a.question_id] = a.answer;
             });
+
+            // Filter to only questions the user was presented with (based on submitted answers)
+            const answeredIds = new Set(Object.keys(answerMap));
+            const sessionQuestions = examData.questions.filter(
+                (q: { id: string }) => answeredIds.has(q.id)
+            );
+
+            const info: ExamInfo = {
+                title: examData.metadata?.title || (examResult.data as any).title || 'Exam',
+                pass_percentage: examData.metadata?.pass_percentage || 70,
+                total_questions: sessionQuestions.length,
+            };
+            setExamInfo(info);
 
             // Calculate domain scores from exam data
             const domainStats: Record<string, { name: string; total: number; correct: number }> = {};
@@ -109,9 +116,9 @@ function ResultsPage() {
             domainStats['_general'] = { name: 'General', total: 0, correct: 0 };
 
             let totalCorrect = 0;
-            const totalQuestions = examData.questions.length;
+            const totalQuestions = sessionQuestions.length;
 
-            examData.questions.forEach((q: { id: string; domain_id?: string; correct_answers: string[] }) => {
+            sessionQuestions.forEach((q: { id: string; domain_id?: string; correct_answers: string[] }) => {
                 const domainId = q.domain_id || '_general';
                 if (!domainStats[domainId]) {
                     domainStats[domainId] = { name: domainId, total: 0, correct: 0 };
@@ -143,7 +150,7 @@ function ResultsPage() {
                 correct: totalCorrect,
                 total: totalQuestions,
                 domainScores,
-                questions: examData.questions,
+                questions: sessionQuestions,
                 userAnswers: answerMap,
             });
         } catch (error) {

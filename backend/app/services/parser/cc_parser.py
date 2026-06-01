@@ -14,9 +14,9 @@ Parsing strategy:
   Cross-block state (last_declared_q) carries over because a Q marker at the
   end of one block gets its answer at the START of the next block.
 - Clean: Remove noise + consumed answer-key lines.
-- Pass 2: Parse question bodies. Any surviving inline "Answer: X" lines
-  (rare in this format) are used as primary answer source.
-- Merge: Fill in questions that lack inline answers from the answer key map.
+- Pass 2: Parse question bodies sequentially (no inline answer detection).
+- Merge: Map parsed bodies to answer keys, auto-detecting bodyless Q numbers
+  (keys with no corresponding body) using explanation-based scoring.
 """
 import re
 import fitz  # PyMuPDF
@@ -40,7 +40,9 @@ class CCPDFExamParser:
             r'|^ISC2$|^Certi.?ed in Cybersecurity',
             re.IGNORECASE,
         )
-        self.inline_answer = re.compile(r'^Answer:\s*([A-F])', re.IGNORECASE)
+        self.inline_answer = re.compile(
+            r'^Answer:\s*([A-F](?:\s*,\s*[A-F])*)', re.IGNORECASE
+        )
 
     def extract_text(self, file_obj: BinaryIO) -> List[str]:
         """Extract text lines from PDF using PyMuPDF."""
@@ -65,6 +67,29 @@ class CCPDFExamParser:
 
     def _is_noise(self, line: str) -> bool:
         return bool(self.noise_pattern.match(line))
+
+    def _is_inline_answer(self, lines: List[str], line_idx: int) -> bool:
+        """
+        Check if an 'Answer: X' line at line_idx is an inline answer
+        (appears directly after options in a question body) rather than
+        an answer-key entry at a page boundary.
+
+        Key rule: noise (author names, page numbers, github links) between
+        an option and an Answer line indicates a page boundary → NOT inline.
+        """
+        for i in range(line_idx - 1, max(-1, line_idx - 3), -1):
+            line = lines[i].strip()
+            if not line:
+                continue
+            # Noise between option and Answer = page boundary
+            if self._is_noise(line):
+                return False
+            # Immediately preceded by an option → inline answer
+            if self.option_pattern.match(line):
+                return True
+            # Anything else (Q/A markers, body text)
+            return False
+        return False
 
     def _extract_answer_keys(
         self, lines: List[str]
@@ -197,40 +222,44 @@ class CCPDFExamParser:
     def _split_explanation_and_question_text(self, explanation_lines: List[str]) -> tuple[List[str], List[str]]:
         """
         When explanation accumulates both real explanation AND the next question text,
-        split them.
+        split them.  Works on joined text to handle PDF line-wrapping correctly.
         """
         if not explanation_lines:
             return [], []
 
-        split_idx = len(explanation_lines)
+        joined = " ".join(line.rstrip() for line in explanation_lines)
 
-        for i in range(len(explanation_lines) - 1, -1, -1):
-            line = explanation_lines[i].rstrip()
-            if line.endswith('?') or line.endswith(':'):
-                start = i
-                for j in range(i - 1, -1, -1):
-                    prev = explanation_lines[j].rstrip()
-                    if prev.endswith('.') or prev.endswith(')'):
-                        break
-                    start = j
-                split_idx = start
-                break
+        # Question-starter words
+        q_starters = (
+            r'(?:Which|What|How|When|Where|Why|Who|The|An?|Is|Are|In|'
+            r'Select|Choose|Identify|Name|If|During|After|Before|According|'
+            r'On|As|\(★\))'
+        )
 
-        if split_idx == len(explanation_lines):
-            question_starters = re.compile(
-                r'^(Which|What|How|When|Where|Why|Who|The|An?|Is|Are|In|A |Select|Choose|Identify|Name)',
-                re.IGNORECASE
+        # Find sentence boundary followed by a question starter.
+        # Sentence boundary: period, closing paren, closing bracket, or closing quote
+        pattern = re.compile(
+            r'(?<=[.)\]"])\s+(' + q_starters + r'\s)',
+            re.IGNORECASE
+        )
+
+        # Take the LAST match that leaves >= 20 chars of explanation
+        best_split = None
+        for m in pattern.finditer(joined):
+            pos = m.start() + 1  # position after punctuation
+            if pos >= 20:
+                best_split = pos
+
+        if best_split is not None:
+            expl_text = joined[:best_split].strip()
+            q_text = joined[best_split:].strip()
+            return (
+                [expl_text] if expl_text else [],
+                [q_text] if q_text else [],
             )
-            for i in range(len(explanation_lines) - 1, -1, -1):
-                if i > 0:
-                    prev = explanation_lines[i - 1].rstrip()
-                    if (prev.endswith('.') or prev.endswith(')')) and question_starters.match(explanation_lines[i]):
-                        split_idx = i
-                        break
 
-        real_explanation = explanation_lines[:split_idx]
-        question_text = explanation_lines[split_idx:]
-        return real_explanation, question_text
+        # Fallback: no clear split found
+        return explanation_lines, []
 
     def _parse_questions(self, cleaned_lines: List[Tuple[str, int]]) -> List[Dict[str, Any]]:
         """
@@ -242,32 +271,46 @@ class CCPDFExamParser:
         current_options: List[Dict[str, str]] = []
         current_explanation: List[str] = []
         in_explanation = False
-        inline_answer: Optional[str] = None
 
         def _flush_question(next_question_text: Optional[List[str]] = None):
             nonlocal current_question_text, current_options, current_explanation
-            nonlocal in_explanation, inline_answer
+            nonlocal in_explanation
 
             if current_options:
                 q_text = " ".join(current_question_text).strip()
                 q_text = re.sub(r'^(ISC2|Certiﬁed in Cybersecurity \(CC\))\s*', '', q_text).strip()
 
                 if q_text:
-                    question = {
-                        "id": str(len(questions) + 1),
-                        "type": "multiple_choice",
-                        "text": q_text,
-                        "options": current_options,
-                        "correct_answers": [inline_answer] if inline_answer else [],
-                        "explanation": " ".join(current_explanation).strip() or None,
-                    }
-                    questions.append(question)
+                    # Phantom question detection: if text looks like explanation
+                    # material (has study guide refs, no question indicators),
+                    # merge it into the previous question's explanation
+                    has_question_mark = '?' in q_text or q_text.rstrip().endswith(':')
+                    has_explanation_marker = bool(re.search(
+                        r'\(see ISC2|\(see NIST|Study Guide|'
+                        r'^The other types of|^The primary goal of .* is to',
+                        q_text[:200], re.IGNORECASE
+                    ))
+                    is_phantom = has_explanation_marker and not has_question_mark
+
+                    if is_phantom and questions:
+                        prev = questions[-1]
+                        prev_expl = prev.get("explanation") or ""
+                        prev["explanation"] = (prev_expl + " " + q_text).strip()
+                    else:
+                        question = {
+                            "id": str(len(questions) + 1),
+                            "type": "multiple_choice",
+                            "text": q_text,
+                            "options": current_options,
+                            "correct_answers": [],
+                            "explanation": " ".join(current_explanation).strip() or None,
+                        }
+                        questions.append(question)
 
             current_question_text = next_question_text or []
             current_options = []
             current_explanation = []
             in_explanation = False
-            inline_answer = None
 
         for line, orig_idx in cleaned_lines:
             # Check for explanation marker
@@ -278,18 +321,20 @@ class CCPDFExamParser:
                     current_explanation.append(after[1].strip())
                 continue
 
-            # Check for inline answer — only when NOT inside explanation
-            inline_match = self.inline_answer.match(line)
-            if inline_match and current_options and not in_explanation:
-                inline_answer = inline_match.group(1).lower()
-                if len(line) < 30:
-                    continue
-
             # Check for option line
             opt_match = self.option_pattern.match(line)
             if opt_match:
                 opt_id = opt_match.group(1).lower()
                 opt_text = opt_match.group(2).strip()
+
+                # Guard: if we're in an explanation and this option ID already
+                # exists, it's explanation text that happens to start with
+                # "B.", "C.", etc. — not a real option.  Example:
+                # "The correct answer is\nB. Confidentiality is the..."
+                existing_ids = {o["id"] for o in current_options}
+                if in_explanation and opt_id != 'a' and opt_id in existing_ids:
+                    current_explanation.append(line)
+                    continue
 
                 if opt_id == 'a':
                     if current_options:
@@ -305,6 +350,7 @@ class CCPDFExamParser:
                         current_question_text = q_text_lines
                         in_explanation = False
 
+                # Recompute after potential flush (current_options may be reset)
                 existing_ids = {o["id"] for o in current_options}
                 if opt_id not in existing_ids:
                     current_options.append({"id": opt_id, "text": opt_text})
@@ -330,31 +376,187 @@ class CCPDFExamParser:
         """
         Merge answer-key answers into questions.
 
-        Strategy: direct 1:1 mapping by question number. Question at index i
-        corresponds to answer_map[i+1]. Inline answers (from Pass 2) take
-        priority and are never overridden.
+        When body count < key count, some Q numbers are "bodyless" (have answer
+        keys but no body text in the PDF). This method finds which Q numbers to
+        skip by extracting expected-answer hints from explanations and scoring
+        candidate mappings.
+
+        Uses a greedy iterative approach: find one bodyless Q at a time using
+        explanation-based scoring, then repeat for remaining gaps.
         """
         if not answer_map:
             return questions
 
+        sorted_q_nums = sorted(answer_map.keys())
+        n_bodies = len(questions)
+        n_keys = len(sorted_q_nums)
+
+        if n_bodies == n_keys:
+            applied = 0
+            for i, q in enumerate(questions):
+                if q["correct_answers"]:
+                    continue
+                ak_answers = [a.strip() for a in answer_map[sorted_q_nums[i]].split(',')]
+                q["correct_answers"] = ak_answers
+                applied += 1
+            logger.info(f"Merge: applied {applied} answers (exact count match)")
+            return questions
+
+        n_bodyless = n_keys - n_bodies
+        if n_bodyless < 0:
+            logger.warning(f"More bodies ({n_bodies}) than keys ({n_keys})")
+            applied = 0
+            for i, q in enumerate(questions):
+                if q["correct_answers"]:
+                    continue
+                if i < n_keys:
+                    ak_answers = [a.strip() for a in answer_map[sorted_q_nums[i]].split(',')]
+                    q["correct_answers"] = ak_answers
+                    applied += 1
+            logger.info(f"Merge: applied {applied} answers (fallback)")
+            return questions
+
+        # Extract expected-answer hints from explanations
+        hints = self._extract_answer_hints(questions)
+        logger.info(f"Extracted {len(hints)} answer hints from explanations")
+
+        # Find bodyless Q numbers iteratively
+        skip_set: Set[int] = set()
+        remaining_keys = list(sorted_q_nums)
+
+        for _ in range(n_bodyless):
+            best_skip = self._find_best_skip(
+                questions, answer_map, remaining_keys, hints
+            )
+            skip_set.add(best_skip)
+            remaining_keys = [q for q in remaining_keys if q != best_skip]
+
+        # Apply mapping
+        mapping_keys = [q for q in sorted_q_nums if q not in skip_set]
         applied = 0
         missing = []
         for i, q in enumerate(questions):
-            q_num = i + 1
             if q["correct_answers"]:
-                continue  # Already has inline answer
-            if q_num in answer_map:
-                ak_answers = [a.strip() for a in answer_map[q_num].split(',')]
+                continue
+            if i < len(mapping_keys):
+                ak_answers = [a.strip() for a in answer_map[mapping_keys[i]].split(',')]
                 q["correct_answers"] = ak_answers
                 applied += 1
             else:
-                missing.append(q_num)
+                missing.append(i + 1)
 
-        logger.info(f"Merge: applied {applied} answers from answer key")
+        logger.info(
+            f"Merge: applied {applied} answers, skipped bodyless Q{sorted(skip_set)}"
+        )
         if missing:
-            logger.warning(f"No answer key for questions: {missing[:20]}")
-
+            logger.warning(f"No answer key for body indices: {missing[:20]}")
         return questions
+
+    def _extract_answer_hints(
+        self, questions: List[Dict[str, Any]]
+    ) -> Dict[int, Tuple[str, int]]:
+        """
+        Extract expected correct-answer hints from explanation text.
+
+        Returns dict mapping body index → (expected_answer, confidence).
+        Confidence levels:
+        - 100: explicit "correct answer is X" reference (nearly always correct)
+        - 1: word-overlap prediction with clear margin (70-75% accurate)
+
+        Uses two signals:
+        1. Explicit answer reference in explanation text
+        2. Word overlap: which option's key words appear most in explanation
+        """
+        hints: Dict[int, Tuple[str, int]] = {}
+
+        answer_ref = re.compile(
+            r'\b(?:correct\s+answer\s+is|answer\s+is)\s+([A-F])\b',
+            re.IGNORECASE,
+        )
+        stopwords = frozenset(
+            'the a an is are was were be been of in to and or for not with '
+            'that this it by as on at from but if so no can has have had do '
+            'does did will would should could may might shall its they them '
+            'their we our you your he she his her which what when where how '
+            'who whom all each every any some most more than also very such '
+            'about into over after before between through up out because '
+            'other these those'.split()
+        )
+
+        for i, q in enumerate(questions):
+            explanation = q.get("explanation", "")
+            if not explanation:
+                continue
+
+            # Signal 1: Explicit answer reference (high confidence)
+            m = answer_ref.search(explanation)
+            if m:
+                hints[i] = (m.group(1).lower(), 100)
+                continue
+
+            # Signal 2: Word overlap between options and explanation
+            if len(explanation) < 20:
+                continue
+            exp_words = set(re.findall(r'[a-z]+', explanation.lower())) - stopwords
+            if not exp_words:
+                continue
+
+            scores: Dict[str, float] = {}
+            for opt in q["options"]:
+                opt_words = set(re.findall(r'[a-z]+', opt["text"].lower())) - stopwords
+                if not opt_words:
+                    continue
+                overlap = len(opt_words & exp_words)
+                scores[opt["id"]] = overlap / len(opt_words)
+
+            if not scores:
+                continue
+            sorted_opts = sorted(scores.items(), key=lambda x: -x[1])
+            best_id, best_score = sorted_opts[0]
+            if best_score > 0.5 and len(sorted_opts) >= 2:
+                margin = best_score - sorted_opts[1][1]
+                if margin > 0.15:
+                    hints[i] = (best_id.lower(), 1)
+
+        return hints
+
+    def _find_best_skip(
+        self,
+        questions: List[Dict[str, Any]],
+        answer_map: Dict[int, str],
+        remaining_keys: List[int],
+        hints: Dict[int, Tuple[str, int]],
+    ) -> int:
+        """
+        Find the single best Q number to skip from remaining_keys.
+
+        Uses confidence-weighted hints: high-confidence mismatches are heavily
+        penalized, low-confidence hints contribute only positive signal.
+        """
+        best_score = -9999
+        best_skip = remaining_keys[-1]  # default: skip last
+
+        for candidate in remaining_keys:
+            mapping = [q for q in remaining_keys if q != candidate]
+            if len(mapping) < len(questions):
+                continue
+
+            score = 0
+            for body_idx, (expected, confidence) in hints.items():
+                if body_idx >= len(mapping):
+                    continue
+                ak = answer_map[mapping[body_idx]].strip().lower().split(',')[0]
+                if ak == expected:
+                    score += confidence
+                elif confidence >= 100:
+                    score -= 500  # Absolute veto for high-confidence mismatch
+
+            if score > best_score:
+                best_score = score
+                best_skip = candidate
+
+        logger.info(f"Best skip candidate: Q{best_skip} (score={best_score})")
+        return best_skip
 
     def parse(self, file_obj: BinaryIO, filename: str) -> Dict[str, Any]:
         """Main entry point - parse CC PDF into ExamData dict."""

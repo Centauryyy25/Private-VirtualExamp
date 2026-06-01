@@ -395,10 +395,7 @@ export default function DashboardPage() {
                                                 </td>
                                                 <td style={{ padding: 'var(--space-4) var(--space-3)' }}>
                                                     <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--gray-900)' }}>
-                                                        {Math.round(entry.score)}
-                                                    </span>
-                                                    <span className="text-muted" style={{ fontSize: '0.875rem' }}>
-                                                        /{entry.totalQuestions * 10}
+                                                        {Math.round(entry.score)}%
                                                     </span>
                                                 </td>
                                                 <td style={{ padding: 'var(--space-4) var(--space-3)' }}>

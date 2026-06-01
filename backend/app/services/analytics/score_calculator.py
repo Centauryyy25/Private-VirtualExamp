@@ -16,12 +16,16 @@ def calculate_session_result(
     end_time: datetime,
 ) -> dict[str, Any]:
     """Calculate exam session result with domain breakdown."""
-    questions = exam_data.get("questions", [])
+    all_questions = exam_data.get("questions", [])
     domains = exam_data.get("domains", [])
     pass_percentage = exam_data.get("metadata", {}).get("pass_percentage", 70)
-    
+
     # Build answer lookup
     answer_map = {a["question_id"]: a for a in user_answers}
+
+    # Only score questions that the user was presented with (based on submitted answers)
+    answered_ids = set(answer_map.keys())
+    questions = [q for q in all_questions if q["id"] in answered_ids]
     
     # Initialize domain tracking
     domain_stats = {}
