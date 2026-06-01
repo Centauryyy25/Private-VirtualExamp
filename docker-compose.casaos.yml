@@ -1,67 +1,51 @@
-version: '3.8'
-
 services:
-  # ----------------------------
-  # DATABASE SERVICE
-  # ----------------------------
   db:
     image: postgres:15-alpine
     container_name: virtualexamp-db
     restart: always
+    env_file: .env.production
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: drSw4GBmQfxr77Fb4qzu # Ganti password ini!
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: virtualexamp
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
     networks:
       - virtualexamp-net
 
-  # ----------------------------
-  # BACKEND SERVICE
-  # ----------------------------
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: virtualexamp-backend
     restart: always
+    env_file: .env.production
     environment:
-      - DATABASE_URL=postgresql+asyncpg://postgres:drSw4GBmQfxr77Fb4qzu@db:5432/virtualexamp
-      - SECRET_KEY=generate_a_long_secret_key_here
-      # PENTING: Ganti http://SERVER_IP:3000 dengan IP server CasaOS Anda
-      - CORS_ORIGINS=["http://localhost:3000","http://192.168.31.48:3000"]
+      - DATABASE_URL=postgresql+asyncpg://postgres:${POSTGRES_PASSWORD}@db:5432/virtualexamp
+      - SECRET_KEY=${SECRET_KEY}
+      - CORS_ORIGINS=["http://${SERVER_IP}:3000"]
+      - DEBUG=false
     depends_on:
       - db
     volumes:
-      # Hanya mount folder uploads agar file PDF yg diupload tidak hilang
       - ./data/uploads:/app/uploads
     networks:
       - virtualexamp-net
-    # Menghubungkan Backend ke Port 8000 Server
     ports:
       - "8000:8000"
 
-  # ----------------------------
-  # FRONTEND SERVICE
-  # ----------------------------
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_API_URL: http://192.168.31.48:8000
+        NEXT_PUBLIC_API_URL: http://${SERVER_IP}:8000
     container_name: virtualexamp-frontend
     restart: always
-    environment:
-      # PENTING: Ini URL Backend yang akan diakses oleh BROWSER pengguna
-      # Ganti 192.168.1.100 dengan IP Asli Server CasaOS Anda
-      - NEXT_PUBLIC_API_URL=http://192.168.31.48:8000
     depends_on:
       - backend
     networks:
       - virtualexamp-net
-    # Menghubungkan Frontend ke Port 3000 Server
     ports:
       - "3000:3000"
 
