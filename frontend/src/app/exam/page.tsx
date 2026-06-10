@@ -145,9 +145,9 @@ export default function ExamPage() {
                         <QuestionCard question={currentQuestion} />
                     </div>
 
-                    {/* Desktop Navigator */}
-                    <aside className="hidden lg:block w-72 shrink-0">
-                        <div className="sticky top-24 bg-white dark:bg-[#1e293b] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-5 max-h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar">
+                    {/* Question Navigator (full-width on mobile, sticky aside on desktop) */}
+                    <aside className="w-full lg:w-72 lg:shrink-0">
+                        <div className="lg:sticky lg:top-24 bg-white dark:bg-[#1e293b] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-4 sm:p-5 lg:max-h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar">
                             <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-5">Exam Navigator</h3>
                             <QuestionNav />
 
@@ -225,7 +225,7 @@ export default function ExamPage() {
                             )}
                         </p>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button
                                 onClick={() => setShowSubmitModal(false)}
                                 disabled={isSubmitting}

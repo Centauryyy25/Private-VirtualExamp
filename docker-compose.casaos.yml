@@ -23,7 +23,7 @@ services:
     environment:
       - DATABASE_URL=postgresql+asyncpg://postgres:${POSTGRES_PASSWORD}@db:5432/virtualexamp
       - SECRET_KEY=${SECRET_KEY}
-      - CORS_ORIGINS=["http://${SERVER_IP}:3000"]
+      - CORS_ORIGINS=${CORS_ORIGINS:-["http://${SERVER_IP}:3000"]}
       - DEBUG=false
     depends_on:
       - db
@@ -39,7 +39,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_API_URL: http://${SERVER_IP}:8000
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://${SERVER_IP}:8000}
     container_name: virtualexamp-frontend
     restart: always
     depends_on:

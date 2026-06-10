@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import {
     RadarChart,
     PolarGrid,
@@ -35,7 +36,24 @@ const COLORS = [
     '#ec4899', '#f43f5e', '#f97316', '#eab308',
 ];
 
+// Tracks whether the viewport is below Tailwind's `sm` breakpoint (640px) so
+// charts can use tighter margins/heights on mobile instead of hardcoded desktop values.
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mql = window.matchMedia('(max-width: 639px)');
+        const update = () => setIsMobile(mql.matches);
+        update();
+        mql.addEventListener('change', update);
+        return () => mql.removeEventListener('change', update);
+    }, []);
+
+    return isMobile;
+}
+
 export function DomainRadarChart({ scores, passPercentage = 70 }: DomainChartProps) {
+    const isMobile = useIsMobile();
     const data = scores.map(s => ({
         domain: s.domain_name.length > 15 ? s.domain_name.slice(0, 12) + '...' : s.domain_name,
         score: s.score,
@@ -45,12 +63,12 @@ export function DomainRadarChart({ scores, passPercentage = 70 }: DomainChartPro
     return (
         <div className="chart-container">
             <h3 className="chart-title">Domain Performance</h3>
-            <ResponsiveContainer width="100%" height={350}>
+            <ResponsiveContainer width="100%" height={isMobile ? 260 : 350}>
                 <RadarChart data={data} cx="50%" cy="50%" outerRadius="70%">
                     <PolarGrid stroke="#e5e7eb" />
                     <PolarAngleAxis
                         dataKey="domain"
-                        tick={{ fontSize: 12, fill: '#6b7280' }}
+                        tick={{ fontSize: isMobile ? 10 : 12, fill: '#6b7280' }}
                     />
                     <PolarRadiusAxis
                         angle={30}
@@ -72,6 +90,7 @@ export function DomainRadarChart({ scores, passPercentage = 70 }: DomainChartPro
 }
 
 export function DomainBarChart({ scores, passPercentage = 70 }: DomainChartProps) {
+    const isMobile = useIsMobile();
     const data = scores.map((s, index) => ({
         name: s.domain_name.length > 20 ? s.domain_name.slice(0, 17) + '...' : s.domain_name,
         score: s.score,
@@ -87,7 +106,7 @@ export function DomainBarChart({ scores, passPercentage = 70 }: DomainChartProps
                 <BarChart
                     data={data}
                     layout="vertical"
-                    margin={{ top: 20, right: 30, left: 100, bottom: 5 }}
+                    margin={{ top: 20, right: isMobile ? 12 : 30, left: isMobile ? 50 : 100, bottom: 5 }}
                 >
                     <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                     <XAxis
@@ -98,8 +117,8 @@ export function DomainBarChart({ scores, passPercentage = 70 }: DomainChartProps
                     <YAxis
                         type="category"
                         dataKey="name"
-                        tick={{ fontSize: 12, fill: '#374151' }}
-                        width={90}
+                        tick={{ fontSize: isMobile ? 10 : 12, fill: '#374151' }}
+                        width={isMobile ? 70 : 90}
                     />
                     <Tooltip
                         formatter={(value, name, props) => {

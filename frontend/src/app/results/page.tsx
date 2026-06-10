@@ -289,10 +289,10 @@ function ResultsPage() {
             <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
                 {/* Score Summary Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-                    <div className="lg:col-span-1 bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center text-center animate-fade-in">
+                    <div className="lg:col-span-1 bg-white dark:bg-[#1e293b] p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center text-center animate-fade-in">
                         <h2 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">Your Final Score</h2>
                         <div className="relative flex items-center justify-center mb-6">
-                            <svg className="w-36 h-36 transform -rotate-90">
+                            <svg viewBox="0 0 144 144" className="w-28 h-28 sm:w-36 sm:h-36 transform -rotate-90">
                                 <circle className="text-slate-100 dark:text-slate-800" cx="72" cy="72" fill="transparent" r="58" stroke="currentColor" strokeWidth="10"></circle>
                                 <circle
                                     className="text-blue-600 transition-all duration-1000 ease-out"
@@ -317,7 +317,7 @@ function ResultsPage() {
                         </p>
                     </div>
 
-                    <div className="lg:col-span-2 bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 animate-fade-in delay-100">
+                    <div className="lg:col-span-2 bg-white dark:bg-[#1e293b] p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 animate-fade-in delay-100">
                         <div className="flex justify-between items-end mb-8">
                             <div>
                                 <h3 className="text-lg font-bold">Exam Statistics</h3>
@@ -329,7 +329,7 @@ function ResultsPage() {
                             </button>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-6 mb-10">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-10">
                             {[
                                 { label: 'Questions', value: `${results.correct} / ${results.total}`, color: 'text-slate-900 dark:text-white' },
                                 { label: 'Correct', value: `${results.correct}`, color: 'text-emerald-500' },
@@ -468,7 +468,7 @@ function ResultsPage() {
 
                 {/* Bottom Actions */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 py-12 border-t border-slate-200 dark:border-slate-800">
-                    <button onClick={() => router.push('/upload')} className="w-full sm:w-auto px-8 py-3.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 font-black hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-sm">
+                    <button onClick={() => router.push('/upload')} className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl border-2 border-slate-200 dark:border-slate-700 font-black hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-sm">
                         Try Another Exam
                     </button>
                     <button onClick={handleDashboard} className="w-full sm:w-auto px-10 py-3.5 bg-blue-600 text-white rounded-xl font-black hover:bg-blue-700 shadow-xl shadow-blue-500/25 active:scale-95 transition-all text-sm">

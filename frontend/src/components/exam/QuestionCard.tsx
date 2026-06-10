@@ -181,8 +181,8 @@ export default function QuestionCard({ question, showAnswer = false }: QuestionC
                 </div>
             )}
 
-            {/* Desktop Quick Nav Buttons */}
-            <div className="hidden sm:flex px-8 py-6 bg-slate-50/50 dark:bg-slate-900/20 border-t border-slate-100 dark:border-slate-800 justify-between items-center">
+            {/* Quick Nav Buttons (flag + prev/next) — available on mobile too */}
+            <div className="flex px-6 sm:px-8 py-6 bg-slate-50/50 dark:bg-slate-900/20 border-t border-slate-100 dark:border-slate-800 justify-between items-center">
                 <button
                     onClick={() => toggleFlag(question.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold text-sm transition-all ${isFlagged

@@ -13,7 +13,7 @@ export default function QuestionNav() {
         const question = questions[index];
         const answer = answers[question.id];
 
-        let base = "w-10 h-10 flex items-center justify-center text-xs font-bold rounded-lg transition-all duration-200 border-2 ";
+        let base = "w-full aspect-square sm:w-10 sm:h-10 sm:aspect-auto flex items-center justify-center text-xs font-bold rounded-lg transition-all duration-200 border-2 ";
 
         if (index === currentQuestionIndex) {
             return base + "bg-blue-600 text-white border-blue-600 ring-2 ring-blue-600/30 ring-offset-2 dark:ring-offset-slate-900 shadow-lg shadow-blue-500/20";

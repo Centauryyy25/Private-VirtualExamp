@@ -31,3 +31,6 @@ uploads/
 
 # Asset (exam dumps - large PDFs)
 Asset/
+
+# Production data (postgres DB + uploads bind mounts)
+data/

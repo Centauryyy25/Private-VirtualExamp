@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -14,6 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "VirtualExamp | Professional Exam Simulation Platform",
   description: "The ultimate professional simulation environment for serious test-takers. Upload your exam files and transform raw questions into a high-stakes certification experience.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -301,7 +301,7 @@ export default function DemoPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button
                                 onClick={() => handleStartDemo('training')}
-                                className="group relative overflow-hidden bg-white dark:bg-[#1e293b] p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary-500 dark:hover:border-primary-500 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                                className="group relative overflow-hidden bg-white dark:bg-[#1e293b] p-6 sm:p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary-500 dark:hover:border-primary-500 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-400/20 to-transparent rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150"></div>
                                 <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -315,7 +315,7 @@ export default function DemoPage() {
 
                             <button
                                 onClick={() => handleStartDemo('timed')}
-                                className="group relative overflow-hidden bg-white dark:bg-[#1e293b] p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-rose-500 dark:hover:border-rose-500 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                                className="group relative overflow-hidden bg-white dark:bg-[#1e293b] p-6 sm:p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-rose-500 dark:hover:border-rose-500 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-rose-400/20 to-transparent rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150"></div>
                                 <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

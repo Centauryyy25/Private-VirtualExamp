@@ -50,50 +50,42 @@ export default function DashboardPage() {
                 borderBottom: '1px solid var(--card-border)',
                 padding: '0',
             }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 var(--space-6)' }}>
+                <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--space-6)' }}>
                     {/* Brand */}
                     <Link href="/" style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--primary-600)', padding: 'var(--space-4) 0' }}>
                         VirtualExam
                     </Link>
 
                     {/* Navigation Menu */}
-                    <nav style={{ display: 'flex', gap: 'var(--space-2)', alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-                        <Link href="/upload" style={{
-                            padding: 'var(--space-4) var(--space-4)',
+                    <nav className="flex items-center justify-center gap-2 flex-1 overflow-x-auto whitespace-nowrap">
+                        <Link href="/upload" className="px-3 py-3 sm:px-4 sm:py-4 text-sm sm:text-[0.9375rem]" style={{
                             color: 'var(--gray-600)',
                             textDecoration: 'none',
-                            fontSize: '0.9375rem',
                             fontWeight: 500,
                             borderBottom: '2px solid transparent',
                             transition: 'all var(--transition-fast)'
                         }}>
                             Exams
                         </Link>
-                        <Link href="/dashboard" style={{
-                            padding: 'var(--space-4) var(--space-4)',
+                        <Link href="/dashboard" className="px-3 py-3 sm:px-4 sm:py-4 text-sm sm:text-[0.9375rem]" style={{
                             color: 'var(--primary-600)',
                             textDecoration: 'none',
-                            fontSize: '0.9375rem',
                             fontWeight: 600,
                             borderBottom: '2px solid var(--primary-600)',
                             transition: 'all var(--transition-fast)'
                         }}>
                             Performance Dashboard
                         </Link>
-                        <span style={{
-                            padding: 'var(--space-4) var(--space-4)',
+                        <span className="px-3 py-3 sm:px-4 sm:py-4 text-sm sm:text-[0.9375rem]" style={{
                             color: 'var(--gray-400)',
-                            fontSize: '0.9375rem',
                             fontWeight: 500,
                             borderBottom: '2px solid transparent',
                             cursor: 'not-allowed'
                         }}>
                             Library
                         </span>
-                        <span style={{
-                            padding: 'var(--space-4) var(--space-4)',
+                        <span className="px-3 py-3 sm:px-4 sm:py-4 text-sm sm:text-[0.9375rem]" style={{
                             color: 'var(--gray-400)',
-                            fontSize: '0.9375rem',
                             fontWeight: 500,
                             borderBottom: '2px solid transparent',
                             cursor: 'not-allowed'
@@ -121,7 +113,7 @@ export default function DashboardPage() {
                                 }}>
                                     {(user.display_name || user.email || 'U').charAt(0).toUpperCase()}
                                 </div>
-                                <span className="text-muted" style={{ fontSize: '0.875rem' }}>
+                                <span className="text-muted hidden sm:inline" style={{ fontSize: '0.875rem' }}>
                                     {user.display_name || user.email}
                                 </span>
                             </>
@@ -134,10 +126,10 @@ export default function DashboardPage() {
                 </div>
             </header>
 
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'var(--space-8) var(--space-6)' }}>
+            <div className="px-4 sm:px-6 py-6 sm:py-8" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 {/* Page Header */}
                 <div style={{ marginBottom: 'var(--space-8)' }}>
-                    <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 'var(--space-2)', color: 'var(--foreground)' }}>
+                    <h1 className="text-2xl sm:text-3xl" style={{ fontWeight: 700, marginBottom: 'var(--space-2)', color: 'var(--foreground)' }}>
                         Account & Progress
                     </h1>
                     <p className="text-muted" style={{ fontSize: '0.9375rem' }}>
@@ -146,9 +138,7 @@ export default function DashboardPage() {
                 </div>
 
                 {/* KPI Summary Cards - 3 cards */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
+                <div className="grid grid-cols-1 sm:grid-cols-3" style={{
                     gap: 'var(--space-4)',
                     marginBottom: 'var(--space-8)'
                 }}>
@@ -251,7 +241,7 @@ export default function DashboardPage() {
 
                 {/* Performance Trend Section */}
                 <div className="card" style={{ marginBottom: 'var(--space-8)' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 'var(--space-6)' }}>
+                    <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start" style={{ marginBottom: 'var(--space-6)' }}>
                         <div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', marginBottom: 'var(--space-2)' }}>
                                 <h2 style={{ fontSize: '1.25rem', fontWeight: 600, margin: 0 }}>Performance Trend</h2>
@@ -270,7 +260,7 @@ export default function DashboardPage() {
                                 Historical view of your exam scores vs. certification cutoffs.
                             </p>
                         </div>
-                        <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+                        <div className="flex flex-wrap" style={{ gap: 'var(--space-2)' }}>
                             <button
                                 onClick={() => setTimeRange(30)}
                                 style={{
@@ -324,7 +314,7 @@ export default function DashboardPage() {
 
                 {/* Recent Activity Table */}
                 <div className="card">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 'var(--space-6)', paddingBottom: 'var(--space-4)', borderBottom: '1px solid var(--gray-200)' }}>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-start" style={{ marginBottom: 'var(--space-6)', paddingBottom: 'var(--space-4)', borderBottom: '1px solid var(--gray-200)' }}>
                         <div>
                             <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: 'var(--space-1)' }}>Recent Activity</h2>
                             <p className="text-muted" style={{ fontSize: '0.875rem', margin: 0 }}>
@@ -423,12 +413,10 @@ export default function DashboardPage() {
                 </div>
 
                 {/* Footer */}
-                <div style={{
+                <div className="flex flex-wrap justify-center" style={{
                     marginTop: 'var(--space-12)',
                     paddingTop: 'var(--space-6)',
                     borderTop: '1px solid var(--gray-200)',
-                    display: 'flex',
-                    justifyContent: 'center',
                     gap: 'var(--space-6)'
                 }}>
                     <a href="#" className="text-muted" style={{ fontSize: '0.875rem', textDecoration: 'none' }}>Privacy Policy</a>

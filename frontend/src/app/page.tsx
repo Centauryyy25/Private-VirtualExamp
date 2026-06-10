@@ -199,7 +199,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 lg:pt-48 h-screen lg:pb-32 bg-background-light dark:bg-background-dark overflow-hidden">
+      <section className="pt-24 pb-12 lg:pt-48 min-h-screen lg:h-screen lg:pb-32 bg-background-light dark:bg-background-dark overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
